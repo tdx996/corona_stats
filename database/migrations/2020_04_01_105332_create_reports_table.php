@@ -55,14 +55,14 @@ class CreateReportsTable extends Migration
         });
 
         collect($this->attributes)->each(function ($attributes) {
-            $attributes['reported_at'] = Carbon::parse($attributes['reported_at']);
+            $attributes['reported_at'] = Carbon::createFromFormat('Y-m-d', $attributes['reported_at']);
             Report::create($attributes);
         });
 
-        Report::all()->each(function(Report $report) {
+        Report::all()->each(function (Report $report) {
             $previousReports = Report::query()->where('reported_at', '<=', $report->reported_at)->get();
             $report->update([
-                'total_cases' => $previousReports->sum('new_cases'),
+                'total_cases'  => $previousReports->sum('new_cases'),
                 'total_deaths' => $previousReports->sum('new_deaths'),
             ]);
         });
