@@ -17,7 +17,5 @@ class Report extends Model
         'reported_at',
     ];
 
-    protected $dateFormat = 'd.m.Y';
-
     protected $dates = ['reported_at'];
 }
