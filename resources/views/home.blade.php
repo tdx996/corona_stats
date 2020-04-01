@@ -4,15 +4,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="info-box">
-                <span class="info-box-icon bg-info">
-                    <i class="fas fa-virus"></i>
+                <span class="info-box-icon bg-warning">
+                    <i class="fas fa-lungs-virus"></i>
                 </span>
 
                 <div class="info-box-content">
                     <span class="info-box-text">{{ trans('messages.total_cases') }}</span>
                     <span class="info-box-number">
                         {{ $reports->last()->total_cases }}
-                        <small class="text-red">
+                        <small class="text-red ml-1">
                             +{{ $reports->last()->new_cases }}
                         </small>
                     </span>
@@ -29,7 +29,7 @@
                     <span class="info-box-text">{{ trans('messages.total_deaths') }}</span>
                     <span class="info-box-number">
                         {{ $reports->last()->total_deaths }}
-                        <small class="text-red">
+                        <small class="text-red ml-1">
                             +{{ $reports->last()->new_deaths }}
                         </small>
                     </span>
@@ -37,7 +37,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="row">
         <div class="col-md-6">
@@ -48,10 +47,10 @@
                     </h3>
                     <ul class="nav nav-pills ml-auto p-2">
                         <li class="nav-item">
-                            <button class="nav-link active" data-chart="total_cases" data-axis-scale="linear">{{ trans('messages.linear') }}</button>
+                            <button class="nav-link btn-sm mr-1 active" data-chart="total_cases" data-axis-scale="linear">{{ trans('messages.linear') }}</button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link" data-chart="total_cases" data-axis-scale="logarithmic">{{ trans('messages.logarithmic') }}</button>
+                            <button class="nav-link btn-sm" data-chart="total_cases" data-axis-scale="logarithmic">{{ trans('messages.logarithmic') }}</button>
                         </li>
                     </ul>
                 </div>
@@ -68,10 +67,10 @@
                     </h3>
                     <ul class="nav nav-pills ml-auto p-2">
                         <li class="nav-item">
-                            <button class="nav-link active" data-chart="total_deaths" data-axis-scale="linear">{{ trans('messages.linear') }}</button>
+                            <button class="nav-link btn-sm mr-1 active" data-chart="total_deaths" data-axis-scale="linear">{{ trans('messages.linear') }}</button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link" data-chart="total_deaths" data-axis-scale="logarithmic">{{ trans('messages.logarithmic') }}</button>
+                            <button class="nav-link btn-sm" data-chart="total_deaths" data-axis-scale="logarithmic">{{ trans('messages.logarithmic') }}</button>
                         </li>
                     </ul>
                 </div>
@@ -106,6 +105,41 @@
                     <canvas id="new_deaths"></canvas>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-sm">
+                <thead>
+                <th>@lang('messages.reported_at')</th>
+                <th>@lang('messages.total_cases')</th>
+                <th>@lang('messages.new_cases')</th>
+                <th>@lang('messages.total_deaths')</th>
+                <th>@lang('messages.new_deaths')</th>
+                </thead>
+                <tbody>
+                @foreach ($reports->reverse() as $report)
+                    <tr>
+                        <td>
+                            {{ $report->reported_at->format('d.m.Y') }}
+                        </td>
+                        <td>
+                            {{ $report->total_cases }}
+                        </td>
+                        <td class="bg-warning">
+                            {{ $report->new_cases }}
+                        </td>
+                        <td>
+                            {{ $report->total_deaths }}
+                        </td>
+                        <td class="bg-danger">
+                            {{ $report->new_deaths }}
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection
@@ -152,8 +186,8 @@
                             label: 'Total Cases',
                             data: @json($reports->pluck('total_cases')->toArray()),
                             borderWidth: 1,
-                            backgroundColor: 'rgba(0, 221, 221, 0.3)',
-                            borderColor: 'rgb(0, 221, 221)',
+                            backgroundColor: 'rgba(255, 193, 5, 0.3)',
+                            borderColor: 'rgb(255, 193, 5)',
                         },
                     ]
                 },
@@ -169,8 +203,8 @@
                             label: 'New Cases',
                             data: @json($reports->pluck('new_cases')->toArray()),
                             borderWidth: 1,
-                            backgroundColor: 'rgba(0, 221, 221, 0.3)',
-                            borderColor: 'rgb(0, 221, 221)',
+                            backgroundColor: 'rgba(255, 193, 5, 0.3)',
+                            borderColor: 'rgb(255, 193, 5)',
                         },
                     ]
                 },
@@ -186,8 +220,8 @@
                             label: 'Total Deaths',
                             data: @json($reports->pluck('total_deaths')->toArray()),
                             borderWidth: 1,
-                            backgroundColor: 'rgba(221,0,35, 0.3)',
-                            borderColor: 'rgb(221,0,35)',
+                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
+                            borderColor: 'rgb(220, 53, 69)',
                         },
                     ]
                 },
@@ -203,8 +237,8 @@
                             label: 'New Deaths',
                             data: @json($reports->pluck('new_deaths')->toArray()),
                             borderWidth: 1,
-                            backgroundColor: 'rgba(221,0,35, 0.3)',
-                            borderColor: 'rgb(221,0,35)',
+                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
+                            borderColor: 'rgb(220, 53, 69)',
                         },
                     ]
                 },

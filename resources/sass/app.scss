@@ -6,6 +6,12 @@
 
 .layout-top-nav {
     .wrapper {
+        .main-header .brand-image {
+            height: 50px;
+            margin-right: .5rem;
+            margin-top: -.5rem;
+            margin-bottom: -.5rem;
+        }
         .content-wrapper {
             padding: 60px 0;
         }

@@ -37,7 +37,7 @@ class CreateReportsTable extends Migration
         ['new_cases' => 46, 'new_deaths' => 1, 'reported_at' => '2020-03-29'],
         ['new_cases' => 26, 'new_deaths' => 2, 'reported_at' => '2020-03-30'],
         ['new_cases' => 46, 'new_deaths' => 2, 'total_recovered' => 10, 'serious_critical' => 24, 'reported_at' => '2020-03-31'],
-        ['new_cases' => 39, 'new_deaths' => 0, 'total_recovered' => 10, 'serious_critical' => 31, 'reported_at' => '2020-04-01'],
+        ['new_cases' => 39, 'new_deaths' => 2, 'total_recovered' => 10, 'serious_critical' => 31, 'reported_at' => '2020-04-01'],
     ];
 
     public function up() {

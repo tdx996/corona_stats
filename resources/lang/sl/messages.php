@@ -7,4 +7,5 @@ return [
     'new_deaths'   => 'Na novo mrtvih',
     'linear'       => 'Linearno',
     'logarithmic'  => 'Logaritmsko',
+    'reported_at'  => 'Datum',
 ];
