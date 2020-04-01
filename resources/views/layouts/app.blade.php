@@ -3,16 +3,7 @@
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
 
-    <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
-        <div class="container">
-            <a href="{{ url('/') }}" class="navbar-brand">
-                <img src="{{ asset('icon.png') }}" alt="Koronavirus Slovenija Logo" class="brand-image" style="opacity: .8">
-                <span class="brand-text">
-                    {{ env('APP_NAME') }}
-                </span>
-            </a>
-        </div>
-    </nav>
+    @include('layouts.header')
 
     <div class="content-wrapper">
 

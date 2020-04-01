@@ -8,4 +8,5 @@ return [
     'linear'       => 'Linearno',
     'logarithmic'  => 'Logaritmsko',
     'reported_at'  => 'Datum',
+    'report_to_us' => 'Obveščaj nas',
 ];
