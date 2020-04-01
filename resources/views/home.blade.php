@@ -5,7 +5,7 @@
         Koronavirus v Sloveniji
     </h2>
     <p>
-        Koronavirus (COVID-19) je nalezljiva bolezen, ki jo povzroča novo odkrit koronavirus. V Sloveniji se je bil prvič odkrit 4. Marca, najverjetneje se je prenesel iz Italije.
+        Koronavirus (COVID-19) je nalezljiva bolezen, ki jo povzroča novo odkrit koronavirus. V Sloveniji je bil prvič odkrit 4. Marca, najverjetneje se je prenesel iz Italije.
     </p>
     <p>
         Slovenija je 12. marca ob 18. uri na podlagi 7. člena zakona o nalezljivih boleznih zaradi naraščanja števila primerov okužb s koronavirusom razglasila epidemijo. Aktiviran je tudi državni načrt. Podlaga za razglasitev epidemije je strokovno mnenje NIJZ. S tem sledimo razglasitvi pandemije Svetovne zdravstvene organizacije.
