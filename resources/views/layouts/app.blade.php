@@ -27,7 +27,7 @@
     </script>
 @endif
 
-@yield('script')
+@stack('scripts')
 
 </body>
 </html>
