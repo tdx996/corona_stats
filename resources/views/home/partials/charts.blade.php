@@ -108,11 +108,22 @@
 <div class="card">
     <div class="card-header d-flex p-0">
         <h3 class="card-title p-3">
-            {{ trans('messages.total_tests_performed') }} vs. @lang('messages.total_cases')
+            @lang('messages.total_tests') / @lang('messages.total_cases')
         </h3>
     </div>
     <div class="card-body">
-        <canvas id="total_tests_performed_vs_total_cases"></canvas>
+        <canvas id="total_tests_vs_total_cases"></canvas>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex p-0">
+        <h3 class="card-title p-3">
+             @lang('messages.total_cases') / @lang('messages.total_hospitalized') / @lang('messages.total_intense_care')
+        </h3>
+    </div>
+    <div class="card-body">
+        <canvas id="total_cases_vs_total_hospitalized_vs_total_intense_care"></canvas>
     </div>
 </div>
 
@@ -161,11 +172,113 @@
                             backgroundColor: 'rgba(255, 193, 5, 0.3)',
                             borderColor: 'rgb(255, 193, 5)',
                         },
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        yAxes: chartConfig.linear
+                    }
+                }
+            });
+
+            new Chart('new_cases', {
+                type: 'bar',
+                data: {
+                    labels: @json($dateLabels),
+                    datasets: [
+                        {
+                            label: '@lang('messages.new_cases')',
+                            data: @json($reports->pluck('new_cases')->toArray()),
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 193, 5, 0.3)',
+                            borderColor: 'rgb(255, 193, 5)',
+                        },
+                    ]
+                },
+                options: defaultOptions
+            });
+
+            charts.total_deaths = new Chart('total_deaths', {
+                type: 'line',
+                data: {
+                    labels: @json($dateLabels),
+                    datasets: [
+                        {
+                            label: '@lang('messages.total_deaths')',
+                            data: @json($reports->pluck('total_deaths')->toArray()),
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
+                            borderColor: 'rgb(220, 53, 69)',
+                        },
+                    ]
+                },
+                options: defaultOptions
+            });
+
+            new Chart('new_deaths', {
+                type: 'bar',
+                data: {
+                    labels: @json($dateLabels),
+                    datasets: [
+                        {
+                            label: '@lang('messages.new_deaths')',
+                            data: @json($reports->pluck('new_deaths')->toArray()),
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
+                            borderColor: 'rgb(220, 53, 69)',
+                        },
+                    ]
+                },
+                options: defaultOptions
+            });
+
+            new Chart('total_tests_vs_total_cases', {
+                type: 'line',
+                data: {
+                    labels: @json($dateLabels),
+                    datasets: [
+                        {
+                            label: '@lang('messages.total_tests')',
+                            data: @json($reports->pluck('total_tests')->toArray()),
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(8,130,220, 0.3)',
+                            borderColor: 'rgb(8,130,220)',
+                        },
+                        {
+                            label: '@lang('messages.total_cases')',
+                            data: @json($reports->pluck('total_cases')->toArray()),
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 193, 5, 0.3)',
+                            borderColor: 'rgb(255, 193, 5)',
+                        },
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        yAxes: chartConfig.linear
+                    }
+                }
+            });
+
+            new Chart('total_cases_vs_total_hospitalized_vs_total_intense_care', {
+                type: 'line',
+                data: {
+                    labels: @json($dateLabels),
+                    datasets: [
+                        {
+                            label: '@lang('messages.total_cases')',
+                            data: @json($reports->pluck('total_cases')->toArray()),
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 193, 5, 0.3)',
+                            borderColor: 'rgb(255, 193, 5)',
+                        },
                         {
                             label: '@lang('messages.total_hospitalized')',
                             data: @json($reports->pluck('total_hospitalized')->toArray()),
                             borderWidth: 1,
-                            backgroundColor: 'rgba(255,96,0, 0.3)',
+                            backgroundColor : 'rgba(255,96,0, 0.3)',
                             borderColor: 'rgb(255,96,0)',
                         },
                         {
@@ -183,81 +296,6 @@
                         yAxes: chartConfig.linear
                     }
                 }
-            });
-
-            new Chart('new_cases', {
-                type: 'bar',
-                data: {
-                    labels: @json($dateLabels),
-                    datasets: [
-                        {
-                            label: 'New Cases',
-                            data: @json($reports->pluck('new_cases')->toArray()),
-                            borderWidth: 1,
-                            backgroundColor: 'rgba(255, 193, 5, 0.3)',
-                            borderColor: 'rgb(255, 193, 5)',
-                        },
-                    ]
-                },
-                options: defaultOptions
-            });
-
-            charts.total_deaths = new Chart('total_deaths', {
-                type: 'line',
-                data: {
-                    labels: @json($dateLabels),
-                    datasets: [
-                        {
-                            label: 'Total Deaths',
-                            data: @json($reports->pluck('total_deaths')->toArray()),
-                            borderWidth: 1,
-                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
-                            borderColor: 'rgb(220, 53, 69)',
-                        },
-                    ]
-                },
-                options: defaultOptions
-            });
-
-            new Chart('new_deaths', {
-                type: 'bar',
-                data: {
-                    labels: @json($dateLabels),
-                    datasets: [
-                        {
-                            label: 'New Deaths',
-                            data: @json($reports->pluck('new_deaths')->toArray()),
-                            borderWidth: 1,
-                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
-                            borderColor: 'rgb(220, 53, 69)',
-                        },
-                    ]
-                },
-                options: defaultOptions
-            });
-
-            new Chart('total_tests_performed_vs_total_cases', {
-                type: 'line',
-                data: {
-                    labels: @json($dateLabels),
-                    datasets: [
-                        {
-                            label: '@lang('messages.total_tests_performed')',
-                            data: @json($reports->pluck('total_tests_performed')->toArray()),
-                            borderWidth: 1,
-                            backgroundColor: 'rgba(8,130,220, 0.3)',
-                            borderColor: 'rgb(8,130,220)',
-                        },
-                        {
-                            label: '@lang('messages.total_cases')',
-                            data: @json($reports->pluck('total_cases')->toArray()),
-                            borderWidth: 1,
-                            backgroundColor: 'rgba(255, 193, 5, 0.3)',
-                            borderColor: 'rgb(255, 193, 5)',
-                        },
-                    ]
-                },
-                options: defaultOptions
             });
 
             $('canvas').closest('.card').find('[data-axis-scale]').on('click', function () {

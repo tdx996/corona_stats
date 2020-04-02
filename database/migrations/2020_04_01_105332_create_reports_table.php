@@ -17,12 +17,12 @@ class CreateReportsTable extends Migration
             $table->integer('new_deaths')->nullable();
             $table->integer('new_hospitalized')->nullable();
             $table->integer('new_intense_care')->nullable();
-            $table->integer('new_tests_performed')->nullable();
+            $table->integer('new_tests')->nullable();
             $table->integer('total_cases')->default(0);
             $table->integer('total_deaths')->default(0);
             $table->integer('total_hospitalized')->default(0);
             $table->integer('total_intense_care')->default(0);
-            $table->integer('total_tests_performed')->default(0);
+            $table->integer('total_tests')->default(0);
             $table->timestamp('reported_at')->nullable();
             $table->timestamps();
         });
@@ -36,7 +36,7 @@ class CreateReportsTable extends Migration
                 'total_deaths'          => $previousReports->sum('new_deaths'),
                 'total_hospitalized'    => $previousReports->sum('new_hospitalized'),
                 'total_intense_care'    => $previousReports->sum('new_intense_care'),
-                'total_tests_performed' => $previousReports->sum('new_tests_performed'),
+                'total_tests' => $previousReports->sum('new_tests'),
             ]);
         });
     }

@@ -7,7 +7,7 @@
             <th>@lang('messages.total_deaths')</th>
             <th>@lang('messages.total_hospitalized')</th>
             <th>@lang('messages.total_intense_care')</th>
-            <th>@lang('messages.total_tests_performed')</th>
+            <th>@lang('messages.total_tests')</th>
             </thead>
             <tbody>
             @foreach ($reports->reverse() as $report)
@@ -17,53 +17,23 @@
                     </td>
                     <td>
                         {{ $report->total_cases }}
-                        <small class="text-gray">
-                            @if (isset($report->new_cases))
-                                +{{ $report->new_cases }}
-                            @else
-                                Ni podatka
-                            @endif
-                        </small>
+                        <x-value-with-diff :value="$report->new_cases"/>
                     </td>
                     <td>
                         {{ $report->total_deaths }}
-                        <small class="text-gray">
-                            @if (isset($report->new_deaths))
-                                +{{ $report->new_deaths }}
-                            @else
-                                Ni podatka
-                            @endif
-                        </small>
+                        <x-value-with-diff :value="$report->new_deaths"/>
                     </td>
                     <td>
                         {{ $report->total_hospitalized }}
-                        <small class="text-gray">
-                            @if (isset($report->new_hospitalized))
-                                +{{ $report->new_hospitalized }}
-                            @else
-                                Ni podatka
-                            @endif
-                        </small>
+                        <x-value-with-diff :value="$report->new_hospitalized"/>
                     </td>
                     <td>
                         {{ $report->total_intense_care }}
-                        <small class="text-gray">
-                            @if (isset($report->new_intense_care))
-                                +{{ $report->new_intense_care }}
-                            @else
-                                Ni podatka
-                            @endif
-                        </small>
+                        <x-value-with-diff :value="$report->new_intense_care"/>
                     </td>
                     <td>
-                        {{ $report->total_tests_performed }}
-                        <small class="text-gray">
-                            @if (isset($report->new_tests_performed))
-                                +{{ $report->new_tests_performed }}
-                            @else
-                                Ni podatka
-                            @endif
-                        </small>
+                        {{ $report->total_tests }}
+                        <x-value-with-diff :value="$report->new_tests"/>
                     </td>
                 </tr>
             @endforeach
