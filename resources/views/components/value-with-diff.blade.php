@@ -1,4 +1,4 @@
-<small class="text-gray {{ $value && $value > 0 ? 'text-danger' : 'text-success' }}">
+<small class="text-{{ $color ?? ($value && $value > 0 ? 'danger' : 'success') }}">
     @if (isset($value))
         @if ($value > 0)
             +{{ $value }}

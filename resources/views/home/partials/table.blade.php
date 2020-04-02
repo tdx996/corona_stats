@@ -33,7 +33,7 @@
                     </td>
                     <td>
                         {{ $report->total_tests }}
-                        <x-value-with-diff :value="$report->new_tests"/>
+                        <x-value-with-diff :value="$report->new_tests" color="success"/>
                     </td>
                 </tr>
             @endforeach

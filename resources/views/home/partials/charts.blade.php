@@ -174,12 +174,7 @@
                         },
                     ]
                 },
-                options: {
-                    responsive: true,
-                    scales: {
-                        yAxes: chartConfig.linear
-                    }
-                }
+                options: defaultOptions
             });
 
             new Chart('new_cases', {
