@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title_suffix', 'Kontakt')
+
 @section('content')
     {!! Form::open(['route' => 'contact', 'method' => 'POST', 'class' => 'card']) !!}
         <div class="card-header">

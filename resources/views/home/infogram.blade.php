@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title_suffix', 'Infogram')
+
 @section('body-class', 'fullscreen')
 
 @section('content')
