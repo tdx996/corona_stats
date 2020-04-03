@@ -63,6 +63,36 @@
     </p>
 
     <h3>
+        Pomembni napotki
+    </h3>
+
+    <h4>
+        Kaj je izolacija?
+    </h4>
+    <p>
+        Izolacija je ukrep, ki ga osebni izbrani zdravnik odredi bolni osebi s COVID-19 in pomeni, da oseba ne sme zapuščati doma, da mora omejiti stike z ostalimi osebami in dosledno upoštevati priporočila za preprečevanje širjenja bolezni.
+        <br/>
+        Izolacija je izjemno pomemben ukrep, ki ga je potrebno dosledno upoštevati. Bolnik, ki je v izolaciji, je v bolniškem staležu. Izolacija je ukrep, ki je odrejen vsem, ki imajo potrjeno okužbo z novim koronavirusom za najmanj 14 dni ali več, če je potek bolezni težji.
+    </p>
+
+
+    <h4>
+        Kaj je samoizolacija?
+    </h4>
+    <p>
+        Samoizolacija je ukrep za osebe z akutno okužbo dihal, ki nimajo potrjene okužbe s COVID-19.
+        <br />
+        Bolnik ostaja doma toliko časa, kolikor trajajo simptomi bolezni (najmanj pa 14 dni) in se vrne v službo oz. v drug kolektiv, ko je zdrav. Bolnik v samoizolaciji poskrbi za skrbno higieno in upošteva nasvete za zmanjšanje možnosti prenosa okužbe. Je v bolniškem staležu.
+    </p>
+
+    <h4>
+        Kaj je socialno distanciranje?
+    </h4>
+    <p>
+        Socialno distanciranje pomaga pri zajezitvi širjenja nalezljivih bolezni, ki se prenašajo kapljično. Še posebej za osebe, ki so zdrave, vendar so bile v tesnem stiku z osebo, pri kateri je bila potrjena okužba s COVID-19. Visoko tvegani so predvsem družinski kontakti, saj je prav v domačem okolju največ možnosti za prenos novega koronavirusa. Socialno distanciranje je priporočilo in ne obveza posamezniku. Tisti, ki ne morejo dela opravljati od doma, lahko hodijo v službo, vendar naj se čim bolj pozorno samoopazujejo in prenehajo z delom ob pojavu bolezenskih težav. Pomeni predvsem upoštevanje navodil, da se brez potrebe ne družimo z osebami izven skupnega gospodinjstva, pazimo na razdaljo 1,5 m, v trgovino gremo čim manjkrat in takrat, ko ni veliko ljudi, kar največ poskusimo opraviti preko spletnih strani. Zelo smo pozorni glede higiene. Vsekakor pa osebam ni odvzeta svoboda gibanja, bolj ključno je razumevanje, da z ustreznim ravnanjem zmanjšujejo možnost širjenja okužbe in prispevajo k obvladovanju pandemije COVID-19. Oseba ni v bolniškem staležu.
+    </p>
+
+    <h3>
         Koristne povezave
     </h3>
 
