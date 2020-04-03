@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="{{ asset('facebook_sharing.png') }}">
     <title>
         {{ env('APP_NAME') }}
         @if (!empty($__env->yieldContent('title_suffix')))
