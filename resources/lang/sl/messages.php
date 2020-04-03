@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'total_cases'        => 'Potrjene okužbe',
+    'total_cases'        => 'Okužbe',
     'total_deaths'       => 'Smrti',
     'total_hospitalized' => 'Hospitalizirani',
     'total_intense_care' => 'Na intezivni negi',
@@ -15,4 +15,5 @@ return [
     'logarithmic'        => 'Logaritmsko',
     'reported_at'        => 'Datum',
     'report_to_us'       => 'Obveščaj nas',
+    'last_updated_at'       => 'Datum zadnje posodobitve',
 ];

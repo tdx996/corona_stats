@@ -1,29 +1,35 @@
+@php
+
+$menu = [
+    'infogram' => 'Infogram',
+    'contact' => 'Pošlji nam vprašanje'
+];
+
+@endphp
+
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
         <a href="{{ url('/') }}" class="navbar-brand">
             <img src="{{ asset('icon.png') }}" alt="Koronavirus Slovenija Logo" class="brand-image" style="opacity: .8">
             <span class="brand-text">
-                    {{ env('APP_NAME') }}
-                </span>
+                {{ env('APP_NAME') }}
+            </span>
         </a>
 
-        <ul class="navbar-nav">
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="{{ route('contact') }}" class="nav-link">
-                    Pošlji nam vprašanje
-                </a>
-            </li>
-        </ul>
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="{{ route('contact') }}">
-                        <span class="mr-1 text-sm text-black">
-                            @lang('messages.report_to_us')
-                        </span>
-                    <i class="fas fa-envelope" style="position:relative;bottom:-2px;"></i>
-                </a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+            <ul class="navbar-nav">
+                @foreach ($menu as $route => $translation)
+                    <li class="nav-item">
+                        <a href="{{ route($route) }}" class="nav-link">
+                            {{ $translation }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 </nav>

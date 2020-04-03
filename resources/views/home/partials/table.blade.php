@@ -17,23 +17,23 @@
                     </td>
                     <td>
                         {{ $report->total_cases }}
-                        <x-value-with-diff :value="$report->new_cases"/>
+                        <x-difference-indicator :value="$report->new_cases"/>
                     </td>
                     <td>
                         {{ $report->total_deaths }}
-                        <x-value-with-diff :value="$report->new_deaths"/>
+                        <x-difference-indicator :value="$report->new_deaths"/>
                     </td>
                     <td>
                         {{ $report->total_hospitalized }}
-                        <x-value-with-diff :value="$report->new_hospitalized"/>
+                        <x-difference-indicator :value="$report->new_hospitalized"/>
                     </td>
                     <td>
                         {{ $report->total_intense_care }}
-                        <x-value-with-diff :value="$report->new_intense_care"/>
+                        <x-difference-indicator :value="$report->new_intense_care"/>
                     </td>
                     <td>
                         {{ $report->total_tests }}
-                        <x-value-with-diff :value="$report->new_tests" color="success"/>
+                        <x-difference-indicator :value="$report->new_tests" color="success"/>
                     </td>
                 </tr>
             @endforeach

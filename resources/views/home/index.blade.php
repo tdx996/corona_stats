@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+    <h1>
+        Statistika za Slovenijo
+    </h1>
+
+    @include('home.partials.counters')
+
     <h2>
         Koronavirus v Sloveniji
     </h2>
@@ -55,6 +61,45 @@
     <p>
         Klicateljem na vprašanja odgovarjajo študentje višjih letnikov Medicinske fakultete pod mentorstvom ustreznih strokovnih služb / strokovnjakov.
     </p>
+
+    <h3>
+        Koristne povezave
+    </h3>
+
+    <ul>
+        <li>
+            <a href="https://www.gov.si/teme/koronavirus/" target="_blank">
+                Gov.si - Koronavirus COVID-19
+                <small class="ml-1">
+                    <i class="fas fa-external-link-alt"></i>
+                </small>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nijz.si/sl/koronavirus-pogosta-vprasanja-in-odgovori#se-nov-koronavirus-imenuje-sars-cov-2-ali-covid-19%3F" target="_blank">
+                Koronavirus - pogosta vprašanja in odgovori
+                <small class="ml-1">
+                    <i class="fas fa-external-link-alt"></i>
+                </small>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nijz.si/sl/koronavirus-2019-ncov" target="_blank">
+                Koronavirus (SARS-CoV-2) - ključne informacije
+                <small class="ml-1">
+                    <i class="fas fa-external-link-alt"></i>
+                </small>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19" target="_blank">
+                Dnevno spremljanje okužb s SARS-CoV-2 (COVID-19)
+                <small class="ml-1">
+                    <i class="fas fa-external-link-alt"></i>
+                </small>
+            </a>
+        </li>
+    </ul>
 
     @includeWhen($poll, 'home.partials.poll')
 @endsection

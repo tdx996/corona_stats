@@ -1,42 +1,5 @@
 <div class="row">
     <div class="col-md-6">
-        <div class="info-box">
-                <span class="info-box-icon bg-warning">
-                    <i class="fas fa-lungs-virus"></i>
-                </span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">{{ trans('messages.total_cases') }}</span>
-                <span class="info-box-number">
-                        {{ $reports->last()->total_cases }}
-                        <small class="text-red ml-1">
-                            +{{ $reports->last()->new_cases }}
-                        </small>
-                    </span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="info-box">
-                <span class="info-box-icon bg-danger">
-                    <i class="fas fa-skull-crossbones"></i>
-                </span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">{{ trans('messages.total_deaths') }}</span>
-                <span class="info-box-number">
-                        {{ $reports->last()->total_deaths }}
-                        <small class="text-red ml-1">
-                            +{{ $reports->last()->new_deaths }}
-                        </small>
-                    </span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6">
         <div class="card">
             <div class="card-header d-flex p-0">
                 <h3 class="card-title p-3">
@@ -156,6 +119,7 @@
                     display: false
                 },
                 responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     yAxes: chartConfig.linear
                 }
@@ -203,8 +167,8 @@
                             label: '@lang('messages.total_deaths')',
                             data: @json($reports->pluck('total_deaths')->toArray()),
                             borderWidth: 1,
-                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
-                            borderColor: 'rgb(220, 53, 69)',
+                            backgroundColor: 'rgba(52, 58, 64, 0.3)',
+                            borderColor: 'rgb(52, 58, 64)',
                         },
                     ]
                 },
@@ -220,8 +184,8 @@
                             label: '@lang('messages.new_deaths')',
                             data: @json($reports->pluck('new_deaths')->toArray()),
                             borderWidth: 1,
-                            backgroundColor: 'rgba(220, 53, 69, 0.3)',
-                            borderColor: 'rgb(220, 53, 69)',
+                            backgroundColor: 'rgba(52, 58, 64, 0.3)',
+                            borderColor: 'rgb(52, 58, 64)',
                         },
                     ]
                 },
@@ -251,6 +215,7 @@
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     scales: {
                         yAxes: chartConfig.linear
                     }
@@ -287,6 +252,7 @@
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     scales: {
                         yAxes: chartConfig.linear
                     }

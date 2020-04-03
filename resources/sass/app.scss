@@ -3,6 +3,18 @@
 @import '~icheck-bootstrap/icheck-bootstrap.css';
 @import '../../vendor/almasaeed2010/adminlte/dist/css/adminlte.css';
 
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+.card {
+    .card-body {
+        min-height: 350px;
+    }
+}
+
 .layout-top-nav {
     .wrapper {
         .main-header .brand-image {
@@ -14,5 +26,57 @@
         .content-wrapper {
             padding: 40px 0;
         }
+    }
+}
+
+.navbar-toggler {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+}
+
+@include mobile {
+    .layout-top-nav.fullscreen {
+        .wrapper {
+            .content-wrapper {
+                padding: 0;
+
+                > .content {
+                    padding: 0;
+
+                    .container {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .card {
+        .card-header {
+            .nav-pills .nav-link {
+                padding: 0.25rem;
+            }
+        }
+
+        .card-body {
+            padding: 0.25rem;
+            min-height: 300px;
+        }
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid rgba(0,0,0,.1);
+        margin-top: 10px;
+    }
+
+    .mobile-hidden {
+        display: none !important;
+    }
+
+    .table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }

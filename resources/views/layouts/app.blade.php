@@ -1,6 +1,6 @@
 @include('layouts.head')
 
-<body class="hold-transition layout-top-nav">
+<body class="hold-transition layout-top-nav @yield('body-class')">
 <div class="wrapper">
 
     @include('layouts.header')
@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 @if (env('GOOGLE_ANALYTICS_ID'))
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162518681-1"></script>
     <script>

@@ -1,5 +1,5 @@
 {!! Form::open(['route' => ['polls.answer', $poll], 'class' => 'modal fade show', 'id' => 'modal_poll']) !!}
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">
@@ -36,7 +36,7 @@
         $(document).ready(function() {
             setTimeout(function() {
                 $('#modal_poll').modal('show')
-            }, 20000);
+            }, 15000);
         });
     </script>
 @endpush

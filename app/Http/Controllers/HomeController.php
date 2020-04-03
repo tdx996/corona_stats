@@ -21,6 +21,10 @@ class HomeController extends Controller
         return view('home.index', compact('poll', 'reports', 'dateLabels'));
     }
 
+    public function infogram() {
+        return view('home.infogram');
+    }
+
     private function dateLabels(Collection $reports): array {
         return $reports
             ->pluck('reported_at')
