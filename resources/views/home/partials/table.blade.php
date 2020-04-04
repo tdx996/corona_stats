@@ -6,7 +6,7 @@
             <th>@lang('messages.total_cases')</th>
             <th>@lang('messages.total_deaths')</th>
             <th>@lang('messages.total_hospitalized')</th>
-            <th>@lang('messages.total_intense_care')</th>
+            <th>@lang('messages.total_critical')</th>
             <th>@lang('messages.total_tests')</th>
             </thead>
             <tbody>
@@ -28,8 +28,8 @@
                         <x-difference-indicator :value="$report->new_hospitalized" inverse="true"/>
                     </td>
                     <td>
-                        {{ $report->total_intense_care }}
-                        <x-difference-indicator :value="$report->new_intense_care" inverse="true"/>
+                        {{ $report->total_critical }}
+                        <x-difference-indicator :value="$report->new_critical" inverse="true"/>
                     </td>
                     <td>
                         {{ $report->total_tests }}

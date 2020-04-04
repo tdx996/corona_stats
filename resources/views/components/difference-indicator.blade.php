@@ -9,14 +9,16 @@
     $color = $colors[$colorKey];
 @endphp
 
-<small class="text-{{ $color }} {{ $class ?? '' }}">
-    @if (isset($value))
+@if (isset($value))
+    <small class="text-{{ $color }} {{ $class ?? '' }}">
         @if ($value >= 0)
             +{{ $value }}
         @else
             {{ $value }}
         @endif
-    @else
+    </small>
+@else
+    <small class="text-gray {{ $class ?? '' }}">
         Ni podatka
-    @endif
-</small>
+    </small>
+@endif

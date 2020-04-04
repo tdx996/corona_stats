@@ -98,11 +98,11 @@
 <div class="card card-chart">
     <div class="card-header d-flex p-0">
         <h3 class="card-title p-3">
-             @lang('messages.total_cases') / @lang('messages.total_hospitalized') / @lang('messages.total_intense_care')
+             @lang('messages.total_cases') / @lang('messages.total_hospitalized') / @lang('messages.total_critical')
         </h3>
     </div>
     <div class="card-body">
-        <canvas id="total_cases_vs_total_hospitalized_vs_total_intense_care"></canvas>
+        <canvas id="total_cases_vs_total_hospitalized_vs_total_critical"></canvas>
     </div>
 </div>
 
@@ -238,7 +238,7 @@
                 }
             });
 
-            new Chart('total_cases_vs_total_hospitalized_vs_total_intense_care', {
+            new Chart('total_cases_vs_total_hospitalized_vs_total_critical', {
                 type: 'line',
                 data: {
                     labels: @json($dateLabels),
@@ -258,8 +258,8 @@
                             borderColor: 'rgb(255,96,0)',
                         },
                         {
-                            label: '@lang('messages.total_intense_care')',
-                            data: @json($reports->pluck('total_intense_care')->toArray()),
+                            label: '@lang('messages.total_critical')',
+                            data: @json($reports->pluck('total_critical')->toArray()),
                             borderWidth: 1,
                             backgroundColor: 'rgba(255,42,0, 0.3)',
                             borderColor: 'rgb(255,42,0)',

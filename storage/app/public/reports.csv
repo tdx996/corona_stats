@@ -1,4 +1,4 @@
-new_cases,new_deaths,new_hospitalized,new_intense_care,new_tests,total_recovered,reported_at
+new_cases,new_deaths,new_hospitalized,new_critical,new_tests,total_recovered,reported_at
 1,0,0,0,0,,2020-03-04
 5,0,0,0,51,,2020-03-05
 2,0,0,0,103,,2020-03-06

@@ -45,7 +45,7 @@ class ImportReports extends Command
                 'total_cases'        => $previousReports->sum('new_cases'),
                 'total_deaths'       => $previousReports->sum('new_deaths'),
                 'total_hospitalized' => $previousReports->sum('new_hospitalized'),
-                'total_intense_care' => $previousReports->sum('new_intense_care'),
+                'total_critical' => $previousReports->sum('new_critical'),
                 'total_tests'        => $previousReports->sum('new_tests'),
             ]);
         });
