@@ -30,3 +30,4 @@ new_cases,new_deaths,new_hospitalized,new_intense_care,new_tests,total_recovered
 39,0,0,3,1288,,2020-04-01
 56,1,-7,-2,1408,70,2020-04-02
 37,4,0,1,1064,70,2020-04-03
+43,2,-3,0,1188,70,2020-04-04
