@@ -19,6 +19,8 @@ Route::post('/anketa/{poll}','PollsController@answer')->name('polls.answer');
 Route::get('/kontakt','ContactController@show')->name('contact');
 Route::post('/kontakt','ContactController@send')->name('contact');
 
+Route::post('/naroci-se','SubscribersController@create')->name('subscribers.create');
+
 Route::get('/debata-o-koronavirusu', 'QuestionsController@index')->name('questions.index');
 Route::get('/debata-o-koronavirusu/{question}', 'QuestionsController@show')->name('questions.show');
 Route::post('/debata-o-koronavirusu/{question}/odgovori', 'AnswersController@store')->name('questions.answers');
