@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-6">
-        <div class="card">
+        <div class="card card-chart">
             <div class="card-header d-flex p-0">
                 <h3 class="card-title p-3">
                     {{ trans('messages.total_cases') }}
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="col-md-6">
-        <div class="card">
+        <div class="card card-chart">
             <div class="card-header d-flex p-0">
                 <h3 class="card-title p-3">
                     {{ trans('messages.total_deaths') }}
@@ -43,7 +43,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <div class="card">
+        <div class="card card-chart">
             <div class="card-header d-flex p-0">
                 <h3 class="card-title p-3">
                     {{ trans('messages.new_cases') }}
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="col-md-6">
-        <div class="card">
+        <div class="card card-chart">
             <div class="card-header d-flex p-0">
                 <h3 class="card-title p-3">
                     {{ trans('messages.new_deaths') }}
@@ -95,7 +95,7 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card card-chart">
     <div class="card-header d-flex p-0">
         <h3 class="card-title p-3">
              @lang('messages.total_cases') / @lang('messages.total_hospitalized') / @lang('messages.total_intense_care')

@@ -33,7 +33,7 @@
                     </td>
                     <td>
                         {{ $report->total_tests }}
-                        <x-difference-indicator :value="$report->new_tests" color="success"/>
+                        <x-difference-indicator :value="$report->new_tests" inverse="true"/>
                     </td>
                 </tr>
             @endforeach

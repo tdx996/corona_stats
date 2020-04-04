@@ -72,7 +72,7 @@
                 <span class="info-box-text">@lang('messages.total_tests')</span>
                 <span class="info-box-number">
                     {{ $reports->last()->total_tests }}
-                    <x-difference-indicator :value="$reports->last()->new_tests" color="success" class="ml-1" />
+                    <x-difference-indicator :value="$reports->last()->new_tests" inverse="true" class="ml-1" />
                 </span>
             </div>
         </div>

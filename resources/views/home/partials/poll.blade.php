@@ -13,7 +13,7 @@
                 <div class="form-group">
                     <label for="value">{{ $poll->question }}</label>
                     <input type="range" class="custom-range" name="value" id="value" min="1" max="10" step="1">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between text-sm">
                         @foreach ($poll->scale as $scale)
                             <div>
                                 {{ $scale }}
@@ -36,7 +36,7 @@
         $(document).ready(function() {
             setTimeout(function() {
                 $('#modal_poll').modal('show')
-            }, 15000);
+            }, 100);
         });
     </script>
 @endpush

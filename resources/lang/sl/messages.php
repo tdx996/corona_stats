@@ -16,4 +16,8 @@ return [
     'reported_at'        => 'Datum',
     'report_to_us'       => 'Obveščaj nas',
     'last_updated_at'    => 'Datum zadnje posodobitve',
+    'full_name'          => 'Vaše ime',
+    'answer_content'     => 'Vaš odgovor',
+    'action_answer'      => 'Odgovori',
+    'anonymous'          => 'Neznanec',
 ];
