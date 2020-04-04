@@ -80,14 +80,15 @@
 
     <div class="col-md-6">
         <div class="info-box">
-            <span class="info-box-icon bg-primary">
-                <i class="fas fa-calendar-alt"></i>
+            <span class="info-box-icon bg-success">
+                <i class="fas fa-walking"></i>
             </span>
 
             <div class="info-box-content">
-                <span class="info-box-text">@lang('messages.last_updated_at')</span>
+                <span class="info-box-text">@lang('messages.total_recovered')</span>
                 <span class="info-box-number">
-                    {{ $reports->last()->reported_at->format('d.m.Y') }}
+                    {{ $reports->last()->total_recovered }}
+                     <x-difference-indicator :value="$reports->whereNotNull('total_recovered')->last()->new_recovered" class="ml-1" />
                 </span>
             </div>
         </div>
