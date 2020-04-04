@@ -21,4 +21,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-16x16.png') }}">
+
+    <script type="text/javascript">
+        window._mNHandle = window._mNHandle || {};
+        window._mNHandle.queue = window._mNHandle.queue || [];
+        medianet_versionId = "3121199";
+    </script>
+    <script src="https://contextual.media.net/dmedianet.js?cid=8CUR45AQG" async="async"></script>
 </head>
