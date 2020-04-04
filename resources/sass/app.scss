@@ -9,6 +9,15 @@
     }
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+
+.navbar-brand {
+    margin-right: 1.5rem;
+}
+
 .desktop-hidden { display: none !important; }
 
 label.optional:after {
@@ -55,6 +64,10 @@ label.optional:after {
 }
 
 @include mobile {
+    .navbar-brand {
+        margin-right: .5rem;
+    }
+
     .layout-top-nav.fullscreen {
         .wrapper {
             .content-wrapper {

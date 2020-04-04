@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
+    <div class="mb-2">
         <h1 class="d-inline-block">
-            Statistika za Slovenijo
+            Statistika Slovenije
         </h1>
 
         @if ($question)
@@ -13,11 +13,12 @@
                 </div>
                 <a href="{{ route('questions.show', $question) }}">
                     {{ $question->content }}
-                    <br>
+                    <br class="mobile-hidden">
                     Pridruži se debati!
                 </a>
             </div>
         @endif
+        <div class="clearfix"></div>
     </div>
 
     @include('home.partials.counters')
