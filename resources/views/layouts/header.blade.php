@@ -29,19 +29,19 @@ $menu = [
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('infogram') }}" class="nav-link {{ \Request::is('infogram*') ? 'active' : '' }}">
+                    <a href="{{ route('infogram') }}" class="nav-link bg-orange {{ \Request::is('infogram*') ? 'active' : '' }}">
                         <i class="fas fa-info mr-1"></i>
                         Infogram
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('contact') }}" class="nav-link {{ \Request::is('kontakt*') ? 'active' : '' }}">
+                    <a href="{{ route('contact') }}" class="nav-link bg-danger {{ \Request::is('kontakt*') ? 'active' : '' }}">
                         <i class="fas fa-envelope mr-1"></i>
                         Poročaj nam
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://gogetfunding.com/comprehensive-statistics-on-covid-19-in-slovenia/" target="_blank" class="nav-link {{ \Request::is('kontakt*') ? 'active' : '' }}">
+                    <a href="https://gogetfunding.com/comprehensive-statistics-on-covid-19-in-slovenia/" target="_blank" class="nav-link bg-dark {{ \Request::is('kontakt*') ? 'active' : '' }}">
                         <i class="fas fa-coins mr-1"></i>
                         Doniraj
                     </a>
