@@ -3,8 +3,6 @@
 @section('title_suffix', 'Debata')
 
 @section('content')
-    @include('shared.success')
-
     @foreach ($questions as $question)
         <div class="card card-widget">
             <div class="card-header">
@@ -25,7 +23,7 @@
                 <div class="card-tools mobile-hidden">
                     <a href="{{ route('questions.show', $question) }}" class="btn btn-primary">
                         <i class="fas fa-reply mr-1"></i>
-                        Odgovori
+                        @lang('messages.action_answer')
                     </a>
                 </div>
             </div>
@@ -48,7 +46,7 @@
                 @endforeach
                 <a href="{{ route('questions.show', $question) }}" class="btn btn-primary w-100 desktop-hidden">
                     <i class="fas fa-reply mr-1"></i>
-                    Odgovori
+                    @lang('messages.action_answer')
                 </a>
             </div>
         </div>

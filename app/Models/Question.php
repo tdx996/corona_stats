@@ -13,8 +13,4 @@ class Question extends Model
     public function answers() {
         return $this->hasMany(Answer::class);
     }
-
-    public function topAnswers() {
-        return $this->answers()->limit(3)->orderBy('created_at', 'DESC');
-    }
 }
