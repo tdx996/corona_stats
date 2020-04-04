@@ -9,10 +9,12 @@
         @if ($question)
             <div class="float-right d-flex">
                 <div class="float-left d-flex align-items-center">
-                    <i class="fas fa-2x fa-comments mr-2"></i>
+                    <i class="fas fa-2x fa-comments mr-3"></i>
                 </div>
                 <a href="{{ route('questions.show', $question) }}">
-                    {{ $question->content }} <br> Pridruži se debati!
+                    {{ $question->content }}
+                    <br>
+                    Pridruži se debati!
                 </a>
             </div>
         @endif

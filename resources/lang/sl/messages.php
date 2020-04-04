@@ -12,7 +12,7 @@ return [
     'new_intense_care'   => 'Novi na intenzivni negi',
     'new_tests'          => 'Novi opravljeni testi',
     'linear'             => 'Linearno',
-    'logarithmic'        => 'Logaritmsko',
+    'logarithmic'        => 'Logaritemsko',
     'reported_at'        => 'Datum',
     'report_to_us'       => 'Obveščaj nas',
     'last_updated_at'    => 'Datum zadnje posodobitve',

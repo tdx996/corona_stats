@@ -13,10 +13,6 @@ class CreateQuestionsTable extends Migration
             $table->text('content');
             $table->timestamps();
         });
-
-        Question::create([
-            'content' => 'Kaj menite o Koronavirusu?'
-        ]);
     }
 
     public function down() {

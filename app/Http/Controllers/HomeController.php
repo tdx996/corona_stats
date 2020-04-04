@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index() {
         $reports = Report::all();
         $poll = $this->findPoll();
-        $question = Question::first();
+        $question = Question::query()->inRandomOrder()->first();
 
         $dateLabels = $this->dateLabels($reports);
 

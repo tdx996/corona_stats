@@ -10,13 +10,7 @@
 
         <div class="card-body">
             @include('shared.errors')
-
-            @if (session()->has('success'))
-                <div class="alert alert-success">
-                    <i class="fas fa-check mr-1"></i>
-                    {{ session()->get('success') }}
-                </div>
-            @endif
+            @include('shared.success')
 
             <div class="form-group">
                 <label for="full_name">Vaše ime</label>

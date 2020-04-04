@@ -11,15 +11,15 @@ class AnswersController extends Controller
 {
     public function store(Question $question, Request $request) {
         $validator = Validator::make($request->all(), [
-            'content' => 'required|min:100'
+            'content' => 'required'
         ]);
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator->errors());
+            return redirect()->back()->withInput()->withErrors($validator->errors());
         }
 
         $question->answers()->create($this->attributes());
 
-        $request->session()->flash('Uspešno ste odgovorili.');
+        $request->session()->flash('success', 'Uspešno ste odgovorili.');
 
         return redirect()->back();
     }
