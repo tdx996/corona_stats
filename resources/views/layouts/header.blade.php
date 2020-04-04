@@ -40,6 +40,12 @@ $menu = [
                         Poročaj nam
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="https://gogetfunding.com/comprehensive-statistics-on-covid-19-in-slovenia/" target="_blank" class="nav-link {{ \Request::is('kontakt*') ? 'active' : '' }}">
+                        <i class="fas fa-coins mr-1"></i>
+                        Doniraj
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
