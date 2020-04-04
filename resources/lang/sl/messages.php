@@ -7,6 +7,7 @@ return [
     'total_critical'     => 'Na intezivni negi',
     'total_tests'        => 'Opravljeni testi',
     'total_recovered'    => 'Ozdravljeni',
+    'total_active'       => 'Aktivni primeri',
     'new_cases'          => 'Nove okužbe',
     'new_deaths'         => 'Nove smrti',
     'new_hospitalized'   => 'Nove hospitalizacije',

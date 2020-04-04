@@ -21,7 +21,7 @@
         <div class="clearfix"></div>
     </div>
 
-    @include('home.partials.counters')
+    <x-counters />
 
     <h2>
         Koronavirus v Sloveniji
