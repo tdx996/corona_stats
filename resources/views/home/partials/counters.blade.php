@@ -9,7 +9,7 @@
                 <span class="info-box-text">@lang('messages.total_cases')</span>
                 <span class="info-box-number">
                     {{ $reports->last()->total_cases }}
-                    <x-difference-indicator :value="$reports->last()->new_cases" class="ml-1" />
+                    <x-difference-indicator :value="$reports->last()->new_cases" inverse="true" class="ml-1" />
                 </span>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <span class="info-box-text">@lang('messages.total_hospitalized')</span>
                 <span class="info-box-number">
                     {{ $reports->last()->total_hospitalized }}
-                    <x-difference-indicator :value="$reports->last()->new_hospitalized" class="ml-1" />
+                    <x-difference-indicator :value="$reports->last()->new_hospitalized" inverse="true" class="ml-1" />
                 </span>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 <span class="info-box-text">@lang('messages.total_intense_care')</span>
                 <span class="info-box-number">
                     {{ $reports->last()->total_intense_care }}
-                    <x-difference-indicator :value="$reports->last()->new_intense_care" class="ml-1" />
+                    <x-difference-indicator :value="$reports->last()->new_intense_care" inverse="true" class="ml-1" />
                 </span>
             </div>
         </div>
@@ -54,7 +54,7 @@
                 <span class="info-box-text">@lang('messages.total_deaths')</span>
                 <span class="info-box-number">
                     {{ $reports->last()->total_deaths }}
-                    <x-difference-indicator :value="$reports->last()->new_deaths" class="ml-1" />
+                    <x-difference-indicator :value="$reports->last()->new_deaths" inverse="true" class="ml-1" />
                 </span>
             </div>
         </div>
@@ -72,7 +72,7 @@
                 <span class="info-box-text">@lang('messages.total_tests')</span>
                 <span class="info-box-number">
                     {{ $reports->last()->total_tests }}
-                    <x-difference-indicator :value="$reports->last()->new_tests" color="success" class="ml-1" />
+                    <x-difference-indicator :value="$reports->last()->new_tests" class="ml-1" />
                 </span>
             </div>
         </div>

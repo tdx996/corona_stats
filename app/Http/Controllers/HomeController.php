@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Poll;
+use App\Models\Question;
 use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
@@ -15,10 +16,11 @@ class HomeController extends Controller
     public function index() {
         $reports = Report::all();
         $poll = $this->findPoll();
+        $question = Question::query()->inRandomOrder()->first();
 
         $dateLabels = $this->dateLabels($reports);
 
-        return view('home.index', compact('poll', 'reports', 'dateLabels'));
+        return view('home.index', compact('poll', 'reports', 'dateLabels', 'question'));
     }
 
     public function infogram() {

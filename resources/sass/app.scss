@@ -9,7 +9,12 @@
     }
 }
 
-.card {
+label.optional:after {
+    content: " (neobvezno)";
+    font-weight: normal;
+}
+
+.card.card-chart {
     .card-body {
         min-height: 350px;
     }
@@ -51,7 +56,7 @@
         }
     }
 
-    .card {
+    .card.card-chart {
         .card-header {
             .nav-pills .nav-link {
                 padding: 0.25rem;
