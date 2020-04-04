@@ -13,6 +13,11 @@ h1 {
     font-size: 2rem;
 }
 
+.navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
 
 .navbar-brand {
     margin-right: 1.5rem;
