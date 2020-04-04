@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title_suffix', 'Debata')
+
 @section('content')
     @include('shared.success')
 
