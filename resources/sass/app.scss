@@ -9,6 +9,8 @@
     }
 }
 
+.desktop-hidden { display: none !important; }
+
 label.optional:after {
     content: " (neobvezno)";
     font-weight: normal;
@@ -18,6 +20,19 @@ label.optional:after {
     .card-body {
         min-height: 350px;
     }
+}
+
+.user-block i {
+    float: left;
+    position: relative;
+    top: 6px;
+}
+
+.card-comments .card-comment i {
+    float: left;
+    position: relative;
+    top: 6px;
+    font-size: 1.6rem;
 }
 
 .layout-top-nav {
@@ -69,6 +84,26 @@ label.optional:after {
         }
     }
 
+    .card-header > .card-tools {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+
+        .btn-primary {
+            width: 100%;
+        }
+    }
+
+    .user-block {
+        .username {
+            line-height: 1.2;
+        }
+
+        .description {
+            margin-top: 5px;
+        }
+    }
+
     .navbar-collapse {
         border-top: 1px solid rgba(0,0,0,.1);
         margin-top: 10px;
@@ -77,6 +112,8 @@ label.optional:after {
     .mobile-hidden {
         display: none !important;
     }
+
+    .desktop-hidden { display: block !important; }
 
     .table {
         display: block;

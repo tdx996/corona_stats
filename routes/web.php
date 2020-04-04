@@ -19,7 +19,8 @@ Route::post('/anketa/{poll}','PollsController@answer')->name('polls.answer');
 Route::get('/kontakt','ContactController@show')->name('contact');
 Route::post('/kontakt','ContactController@send')->name('contact');
 
-Route::get('/vprasanje/{question}', 'QuestionsController@show')->name('questions.show');
-Route::post('/vprasanje/{question}/odgovori', 'AnswersController@store')->name('questions.answers');
-Route::post('/vprasanje/{question}/odgovori/{answer}/up-vote', 'AnswersController@upVote')->name('questions.answers.up_vote');
-Route::post('/vprasanje/{question}/odgovori/{answer}/down-vote', 'AnswersController@downVote')->name('questions.answers.down_vote');
+Route::get('/debata-o-koronavirusu', 'QuestionsController@index')->name('questions.index');
+Route::get('/debata-o-koronavirusu/{question}', 'QuestionsController@show')->name('questions.show');
+Route::post('/debata-o-koronavirusu/{question}/odgovori', 'AnswersController@store')->name('questions.answers');
+Route::post('/debata-o-koronavirusu/{question}/odgovori/{answer}/up-vote', 'AnswersController@upVote')->name('questions.answers.up_vote');
+Route::post('/debata-o-koronavirusu/{question}/odgovori/{answer}/down-vote', 'AnswersController@downVote')->name('questions.answers.down_vote');
