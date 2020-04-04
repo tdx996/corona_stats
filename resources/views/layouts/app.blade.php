@@ -15,6 +15,8 @@
     </div>
 </div>
 
+@include('shared.success')
+
 <script src="{{ mix('js/app.js') }}"></script>
 @if (env('GOOGLE_ANALYTICS_ID'))
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162518681-1"></script>

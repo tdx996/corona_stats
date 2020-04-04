@@ -21,6 +21,8 @@ class SubscribersController extends Controller
             'ip_address' => $request->ip()
         ]);
 
+        session()->flash('success', 'Naročili ste se na obveščanje!');
+
         return redirect()->back();
     }
 }
