@@ -14,9 +14,7 @@ class QuestionsController extends Controller
     public function index() {
         $questions = Question::query()
             ->orderBy('created_at', 'DESC')
-            ->with(['topAnswers' => function(HasMany $query) {
-                $query->orderBy('created_at', 'DESC');
-            }])
+            ->with('topAnswers')
             ->get();
 
         return view('questions.index', compact('questions'));

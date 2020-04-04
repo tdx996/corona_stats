@@ -15,6 +15,6 @@ class Question extends Model
     }
 
     public function topAnswers() {
-        return $this->answers()->limit(3);
+        return $this->answers()->limit(3)->orderBy('created_at', 'DESC');
     }
 }
