@@ -5,11 +5,14 @@
                 <i class="fas fa-lungs-virus"></i>
             </span>
 
-            <div class="info-box-content">
+            <div class="info-box-content pt-0 pb-0 pr-0">
                 <span class="info-box-text">@lang('messages.total_cases')</span>
                 <span class="info-box-number">
-                    {{ $totalCases }}
-                    <x-difference-indicator :value="$newCases" inverse="true" class="ml-1" />
+                    {{ $reportYesterday->total_cases }}
+                    <x-difference-indicator :value="$reportYesterday->new_cases" inverse="true" class="ml-1" />
+                </span>
+                <span class="text-xs text-gray float-right text-uppercase">
+                    {{ $reportYesterday->reported_at->format('j. F') }}
                 </span>
             </div>
         </div>
@@ -20,11 +23,14 @@
                 <i class="fas fa-hospital-symbol"></i>
             </span>
 
-            <div class="info-box-content">
+            <div class="info-box-content pt-0 pb-0 pr-0">
                 <span class="info-box-text">@lang('messages.total_hospitalized')</span>
                 <span class="info-box-number">
-                    {{ $totalHospitalized }}
-                    <x-difference-indicator :value="$newHospitalized" inverse="true" class="ml-1" />
+                    {{ $reportToday->total_hospitalized }}
+                    <x-difference-indicator :value="$reportToday->new_hospitalized" inverse="true" class="ml-1" />
+                </span>
+                <span class="text-xs text-gray float-right text-uppercase">
+                    {{ $reportToday->reported_at->format('j. F') }}
                 </span>
             </div>
         </div>
@@ -35,11 +41,14 @@
                 <i class="fas fa-procedures"></i>
             </span>
 
-            <div class="info-box-content">
+            <div class="info-box-content pt-0 pb-0 pr-0">
                 <span class="info-box-text">@lang('messages.total_critical')</span>
                 <span class="info-box-number">
-                    {{ $totalCritical }}
-                    <x-difference-indicator :value="$newCritical" inverse="true" class="ml-1" />
+                    {{ $reportToday->total_critical }}
+                    <x-difference-indicator :value="$reportToday->new_critical" inverse="true" class="ml-1" />
+                </span>
+                <span class="text-xs text-gray float-right text-uppercase">
+                    {{ $reportToday->reported_at->format('j. F') }}
                 </span>
             </div>
         </div>
@@ -50,11 +59,14 @@
                 <i class="fas fa-skull-crossbones"></i>
             </span>
 
-            <div class="info-box-content">
+            <div class="info-box-content pt-0 pb-0 pr-0">
                 <span class="info-box-text">@lang('messages.total_deaths')</span>
                 <span class="info-box-number">
-                    {{ $totalDeaths }}
-                    <x-difference-indicator :value="$newDeaths" inverse="true" class="ml-1" />
+                    {{ $reportToday->total_deaths }}
+                    <x-difference-indicator :value="$reportToday->new_deaths" inverse="true" class="ml-1" />
+                </span>
+                <span class="text-xs text-gray float-right text-uppercase">
+                    {{ $reportToday->reported_at->format('j. F') }}
                 </span>
             </div>
         </div>
@@ -68,11 +80,14 @@
                 <i class="fas fa-vial"></i>
             </span>
 
-            <div class="info-box-content">
+            <div class="info-box-content pt-0 pb-0 pr-0">
                 <span class="info-box-text">@lang('messages.total_tests')</span>
                 <span class="info-box-number">
-                    {{ $totalTests }}
-                    <x-difference-indicator :value="$newTests" class="ml-1" />
+                    {{ $reportYesterday->total_tests }}
+                    <x-difference-indicator :value="$reportYesterday->new_tests" class="ml-1" />
+                </span>
+                <span class="text-xs text-gray float-right text-uppercase">
+                    {{ $reportYesterday->reported_at->format('j. F') }}
                 </span>
             </div>
         </div>
@@ -84,11 +99,14 @@
                 <i class="fas fa-walking"></i>
             </span>
 
-            <div class="info-box-content">
+            <div class="info-box-content pt-0 pb-0 pr-0">
                 <span class="info-box-text">@lang('messages.total_recovered')</span>
                 <span class="info-box-number">
-                    {{ $totalRecovered }}
-                     <x-difference-indicator :value="$newRecovered" class="ml-1" />
+                    {{ $reportToday->total_recovered }}
+                     <x-difference-indicator :value="$reportToday->new_recovered" class="ml-1" />
+                </span>
+                <span class="text-xs text-gray float-right text-uppercase">
+                    {{ $reportToday->reported_at->format('j. F') }}
                 </span>
             </div>
         </div>
@@ -105,6 +123,9 @@
                 <span class="info-box-number">
                     {{ $totalActive }}
                      <x-difference-indicator :value="$newActive" class="ml-1" inverse="true" />
+                </span>
+                <span class="text-xs text-gray float-right text-uppercase">
+                    {{ $reportToday->reported_at->format('j. F') }}
                 </span>
             </div>
         </div>
