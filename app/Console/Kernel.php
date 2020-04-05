@@ -2,9 +2,9 @@
 
 namespace App\Console;
 
-use App\Console\Commands\CreateReports;
 use App\Console\Commands\ImportReportsFromApi;
 use App\Console\Commands\ImportReportsFromGov;
+use App\Console\Commands\NotifySubscribers;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         ImportReportsFromApi::class,
         ImportReportsFromGov::class,
-        CreateReports::class,
+        NotifySubscribers::class,
     ];
 
     protected function schedule(Schedule $schedule) {
