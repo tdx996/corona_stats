@@ -22,5 +22,5 @@ return [
     'answer_content'     => 'Vaš odgovor',
     'action_answer'      => 'Odgovori',
     'anonymous'          => 'Neznanec',
-    'answers'            => '{0} 0 odgovorov|{1} :count odgovor|{2} :count odgovora|[3-4] :count odgovori|[5-*] :count odgovorov',
+    'answers'            => '{0} 0 odgovorov|{1} :count odgovor|{2} :count odgovora|[3,4] :count odgovori|[5,*] :count odgovorov',
 ];

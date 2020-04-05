@@ -6,7 +6,6 @@ use App\Mail\ReportsUpdated;
 use App\Models\Subscriber;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
-use Spatie\Sitemap\SitemapGenerator;
 
 class NotifySubscribers extends Command
 {

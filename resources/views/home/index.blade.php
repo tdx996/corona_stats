@@ -1,25 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="mb-2">
-        <h1 class="d-inline-block">
-            Statistika Slovenije
-        </h1>
+    @include('home.partials.question_widget')
 
-        @if ($question)
-            <div class="float-right d-flex">
-                <div class="float-left d-flex align-items-center">
-                    <i class="fas fa-2x fa-comments mr-3"></i>
-                </div>
-                <a href="{{ route('questions.show', $question) }}">
-                    {{ $question->content }}
-                    <br class="mobile-hidden">
-                    Pridruži se debati!
-                </a>
-            </div>
-        @endif
-        <div class="clearfix"></div>
-    </div>
+    <h1 class="d-inline-block">
+        Statistika Slovenije
+    </h1>
 
     <x-counters />
 

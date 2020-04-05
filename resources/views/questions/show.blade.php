@@ -24,27 +24,24 @@
         </div>
     </div>
 
+    <div class="card">
+        <div class="card-body">
+            {!! Form::open(['route' => ['questions.answers', $question]]) !!}
+                @include('shared.errors')
 
-    @if ($question->answers()->where('ip_address', request()->ip())->doesntExist())
-        <div class="card">
-            <div class="card-body">
-                {!! Form::open(['route' => ['questions.answers', $question]]) !!}
-                    @include('shared.errors')
+                <div class="form-group">
+                    {!! Form::label('full_name', trans('messages.full_name'), ['class' => 'optional']) !!}
+                    {!! Form::text('full_name', null, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::label('content', trans('messages.answer_content')) !!}
+                    {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
+                </div>
 
-                    <div class="form-group">
-                        {!! Form::label('full_name', trans('messages.full_name'), ['class' => 'optional']) !!}
-                        {!! Form::text('full_name', null, ['class' => 'form-control']) !!}
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('content', trans('messages.answer_content')) !!}
-                        {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
-                    </div>
-
-                    {!! Form::submit(trans('messages.action_answer'), ['class' => 'btn btn-primary']) !!}
-                {!! Form::close() !!}
-            </div>
+                {!! Form::submit(trans('messages.action_answer'), ['class' => 'btn btn-primary']) !!}
+            {!! Form::close() !!}
         </div>
-    @endif
+    </div>
 
     @if ($answersGroupedByDay->isNotEmpty())
         <div class="timeline">
