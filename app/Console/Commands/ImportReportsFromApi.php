@@ -44,6 +44,7 @@ class ImportReportsFromApi extends Command
 
     private function importFromApi() {
         $response = Http::get('https://covid19.rthand.com/api/stats');
+
         collect($response->json())->each(function ($dailyReport) {
             $reportedAt = Carbon::create($dailyReport['year'], $dailyReport['month'], $dailyReport['day']);
             $report = Report::create([
@@ -52,7 +53,7 @@ class ImportReportsFromApi extends Command
                 'new_tests'          => $dailyReport['performedTests'],
                 'new_deaths'         => $dailyReport['statePerTreatment']['deceased'],
                 'total_hospitalized' => $dailyReport['statePerTreatment']['inHospital'] ?? 0,
-                'total_critical'     => $dailyReport['statePerTreatment']['critical'] ?? 0,
+                'total_critical'     => $dailyReport['statePerTreatment']['inICU'] ?? 0,
                 'total_active'       => $dailyReport['cases']['activeToDate'] ?? 0,
                 'total_recovered'    => $this->recovered[$reportedAt->format('Y-m-d')] ?? 0,
             ]);
