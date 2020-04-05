@@ -3,19 +3,21 @@
 namespace App\Console;
 
 use App\Console\Commands\CreateReports;
-use App\Console\Commands\ImportReports;
+use App\Console\Commands\ImportReportsFromApi;
+use App\Console\Commands\ImportReportsFromGov;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
     protected $commands = [
-        ImportReports::class,
+        ImportReportsFromApi::class,
+        ImportReportsFromGov::class,
         CreateReports::class,
     ];
 
     protected function schedule(Schedule $schedule) {
-         $schedule->command(CreateReports::class)->everyFifteenMinutes();
+//         $schedule->command(CreateReports::class)->everyFifteenMinutes();
     }
 
     protected function commands() {

@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use Revolution\Google\Sheets\Facades\Sheets;
 
-class ImportReports extends Command
+class ImportReportsFromApi extends Command
 {
-    protected $signature = 'reports:import';
-    protected $description = 'Import reports from CSV.';
+    protected $signature = 'reports:api';
+    protected $description = 'Import reports from API.';
 
     protected $recovered = [
         '2020-04-03' => 70,
@@ -32,7 +32,6 @@ class ImportReports extends Command
         DB::transaction(function() {
             $this->deleteOld();
             $this->importFromApi();
-            $this->importFromExcel();
             $this->processReports();
         });
     }
@@ -62,22 +61,6 @@ class ImportReports extends Command
         });
 
         $this->info('Imported from API.');
-    }
-
-    private function importFromExcel() {
-        $this->storeExcel();
-
-        $path = storage_path('app/public/daily_reports.xlsx');
-        (new ReportsImport)->import($path, null, \Maatwebsite\Excel\Excel::XLSX);
-
-        $this->info('Excel imported');
-    }
-
-    private function storeExcel() {
-        $contents = file_get_contents('https://www.gov.si/teme/koronavirus/element/65441/xlsx');
-        Storage::put('public/daily_reports.xlsx', $contents);
-
-        $this->info('Excel stored');
     }
 
     private function processReports() {
