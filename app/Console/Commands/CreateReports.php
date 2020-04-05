@@ -59,19 +59,21 @@ class CreateReports extends Command
     }
 
     private function processReports() {
-        Report::all()->each(function (Report $report) {
-            $previousReports = Report::query()->where('reported_at', '<=', $report->reported_at)->get();
-            $previousReport = $previousReports->where('id', '!=', $report->id)->last();
-            $report->update([
-                'total_cases'      => $previousReports->sum('new_cases'),
-                'total_tests'      => $previousReports->sum('new_tests'),
-                'total_deaths'     => $previousReports->sum('new_deaths'),
-                'new_hospitalized' => ($report->total_hospitalized ?? 0) - ($previousReport->total_hospitalized ?? 0),
-                'new_critical'     => ($report->total_critical ?? 0) - ($previousReport->total_critical ?? 0),
-                'new_active'       => ($report->total_active ?? 0) - ($previousReport->total_active ?? 0),
-                'new_recovered'    => ($report->total_recovered ?? 0) - ($previousReport->total_recovered ?? 0),
-            ]);
-        });
+        Report::all()
+            ->each(function (Report $report) {
+                $previousReports = Report::query()->where('reported_at', '<=', $report->reported_at)->get();
+                $previousReport = $previousReports->where('id', '!=', $report->id)->last();
+
+                $report->update([
+                    'total_cases'      => $previousReports->sum('new_cases'),
+                    'total_tests'      => $previousReports->sum('new_tests'),
+                    'total_deaths'     => $previousReports->sum('new_deaths'),
+                    'new_hospitalized' => ($report->total_hospitalized ?? 0) - ($previousReport->total_hospitalized ?? 0),
+                    'new_critical'     => ($report->total_critical ?? 0) - ($previousReport->total_critical ?? 0),
+                    'new_active'       => ($report->total_active ?? 0) - ($previousReport->total_active ?? 0),
+                    'new_recovered'    => ($report->total_recovered ?? 0) - ($previousReport->total_recovered ?? 0),
+                ]);
+            });
 
         $this->info('Reports processed');
     }
