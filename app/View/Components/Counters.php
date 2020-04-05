@@ -19,8 +19,8 @@ class Counters extends Component
     private $reportToday, $reportYesterday;
 
     public function __construct() {
-        $this->reportToday = $this->findTodayReport();
         $this->reportYesterday = $this->findYesterdayReport();
+        $this->reportToday = $this->findTodayReport() ?? $this->reportYesterday;
 
         $this->setCases();
         $this->setHospitalized();
