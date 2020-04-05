@@ -104,7 +104,7 @@
                 <span class="info-box-text">@lang('messages.total_active')</span>
                 <span class="info-box-number">
                     {{ $totalActive }}
-                     <x-difference-indicator :value="$newActive" class="ml-1" />
+                     <x-difference-indicator :value="$newActive" class="ml-1" inverse="true" />
                 </span>
             </div>
         </div>
