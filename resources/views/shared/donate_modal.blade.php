@@ -30,7 +30,13 @@
     <script>
         $(document).ready(function() {
             $('#trigger_donate_modal').on('click', function() {
-                $('#modal_donate').modal('show')
+                $('#modal_donate').modal('show');
+                ga('send', 'event', 'Brezplačna donacija', 'click', 'Open donation modal');
+            });
+
+            $('#modal_donate a').on('click', function() {
+                $('#modal_donate').modal('hide');
+                ga('send', 'event', 'Opravi donacijo', 'click', 'Redirect to ad');
             })
         });
     </script>

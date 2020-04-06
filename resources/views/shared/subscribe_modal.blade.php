@@ -39,7 +39,12 @@
     <script>
         $(document).ready(function() {
             $('.trigger-subscribe-modal').on('click', function() {
-                $('#modal_subscribe').modal('show')
+                $('#modal_subscribe').modal('show');
+                ga('send', 'event', 'Obveščaj me', 'click', 'Open subscribe modal');
+            });
+
+            $('#modal_subscribe').on('submit', function() {
+                ga('send', 'event', 'Naroči se', 'submit', 'Subscribe to newsletter');
             })
         });
     </script>
