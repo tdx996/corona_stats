@@ -94,50 +94,71 @@
         Socialno distanciranje pomaga pri zajezitvi širjenja nalezljivih bolezni, ki se prenašajo kapljično. Še posebej za osebe, ki so zdrave, vendar so bile v tesnem stiku z osebo, pri kateri je bila potrjena okužba s COVID-19. Visoko tvegani so predvsem družinski kontakti, saj je prav v domačem okolju največ možnosti za prenos novega koronavirusa. Socialno distanciranje je priporočilo in ne obveza posamezniku. Tisti, ki ne morejo dela opravljati od doma, lahko hodijo v službo, vendar naj se čim bolj pozorno samoopazujejo in prenehajo z delom ob pojavu bolezenskih težav. Pomeni predvsem upoštevanje navodil, da se brez potrebe ne družimo z osebami izven skupnega gospodinjstva, pazimo na razdaljo 1,5 m, v trgovino gremo čim manjkrat in takrat, ko ni veliko ljudi, kar največ poskusimo opraviti preko spletnih strani. Zelo smo pozorni glede higiene. Vsekakor pa osebam ni odvzeta svoboda gibanja, bolj ključno je razumevanje, da z ustreznim ravnanjem zmanjšujejo možnost širjenja okužbe in prispevajo k obvladovanju pandemije COVID-19. Oseba ni v bolniškem staležu.
     </p>
 
-    <h3>
-        Koristne povezave
-    </h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>
+                Viri podatkov
+            </h3>
 
-    <ul>
-        <li>
-            <a href="https://www.gov.si/teme/koronavirus/" target="_blank">
-                Gov.si - Koronavirus COVID-19
-                <small class="ml-1">
-                    <i class="fas fa-external-link-alt"></i>
-                </small>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.nijz.si/sl/koronavirus-pogosta-vprasanja-in-odgovori#se-nov-koronavirus-imenuje-sars-cov-2-ali-covid-19%3F" target="_blank">
-                Koronavirus - pogosta vprašanja in odgovori
-                <small class="ml-1">
-                    <i class="fas fa-external-link-alt"></i>
-                </small>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.nijz.si/sl/koronavirus-2019-ncov" target="_blank">
-                Koronavirus (SARS-CoV-2) - ključne informacije
-                <small class="ml-1">
-                    <i class="fas fa-external-link-alt"></i>
-                </small>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19" target="_blank">
-                Dnevno spremljanje okužb s SARS-CoV-2 (COVID-19)
-                <small class="ml-1">
-                    <i class="fas fa-external-link-alt"></i>
-                </small>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.worldometers.info/coronavirus/" target="_blank">
-                Statistika za svet
-                <small class="ml-1">
-                    <i class="fas fa-external-link-alt"></i>
-                </small>
-            </a>
-        </li>
-    </ul>
+            <ul>
+                <li>
+                    <a href="https://www.gov.si/teme/koronavirus/" target="_blank">
+                        Gov.si - Koronavirus COVID-19
+                        <small class="ml-1">
+                            <i class="fas fa-external-link-alt"></i>
+                        </small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.worldometers.info/coronavirus/" target="_blank">
+                        Statistika za svet
+                        <small class="ml-1">
+                            <i class="fas fa-external-link-alt"></i>
+                        </small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://covid-19.sledilnik.org/" target="_blank">
+                        COVID-19 Sledilnik
+                        <small class="ml-1">
+                            <i class="fas fa-external-link-alt"></i>
+                        </small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h3>
+                Koristne povezave
+            </h3>
+
+            <ul>
+                <li>
+                    <a href="https://www.nijz.si/sl/koronavirus-pogosta-vprasanja-in-odgovori#se-nov-koronavirus-imenuje-sars-cov-2-ali-covid-19%3F" target="_blank">
+                        Koronavirus - pogosta vprašanja in odgovori
+                        <small class="ml-1">
+                            <i class="fas fa-external-link-alt"></i>
+                        </small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.nijz.si/sl/koronavirus-2019-ncov" target="_blank">
+                        Koronavirus (SARS-CoV-2) - ključne informacije
+                        <small class="ml-1">
+                            <i class="fas fa-external-link-alt"></i>
+                        </small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19" target="_blank">
+                        Dnevno spremljanje okužb s SARS-CoV-2 (COVID-19)
+                        <small class="ml-1">
+                            <i class="fas fa-external-link-alt"></i>
+                        </small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 @endsection
