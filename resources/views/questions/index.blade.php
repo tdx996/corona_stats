@@ -31,7 +31,7 @@
             <div class="card-footer card-comments">
                 @foreach ($question->answers->take(3) as $answer)
                     <div class="card-comment">
-                        <i class="far fa-comment"></i>
+                        <i class="far fa-user"></i>
 
                         <div class="comment-text">
                         <span class="username">

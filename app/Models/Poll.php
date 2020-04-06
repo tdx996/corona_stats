@@ -9,7 +9,7 @@ class Poll extends Model
     ];
 
     protected $casts = [
-        'scale' => 'array'
+        'options' => 'array'
     ];
 
     public function results() {

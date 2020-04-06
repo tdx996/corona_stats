@@ -55,9 +55,28 @@ label.optional:after {
     font-weight: normal;
 }
 
-.card.card-chart {
-    .card-body {
-        min-height: 350px;
+.card {
+    &.card-widget-poll {
+        .user-block .username {
+            position: relative;
+            top: 6px;
+        }
+
+        @include mobile {
+            .card-header>.card-tools {
+                margin-right: 0;
+
+                .btn-primary {
+                    margin-bottom: 0.25rem;
+                }
+            }
+        }
+    }
+
+    .card-chart {
+        .card-body {
+            min-height: 350px;
+        }
     }
 }
 
@@ -70,8 +89,8 @@ label.optional:after {
 .card-comments .card-comment i {
     float: left;
     position: relative;
-    top: 6px;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    top: 10px;
 }
 
 .layout-top-nav {

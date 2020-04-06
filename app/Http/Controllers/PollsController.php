@@ -16,8 +16,6 @@ class PollsController extends Controller
             'value'      => $request->get('value')
         ]);
 
-        return redirect()
-            ->back()
-            ->withCookie(cookie()->forever('poll_answered', $poll->id));
+        return redirect()->back();
     }
 }

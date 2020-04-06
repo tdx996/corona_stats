@@ -37,16 +37,11 @@ class HomeController extends Controller
     }
 
     private function findPoll(): ?Poll {
-        $poll = Poll::query()
+        return  Poll::query()
             ->whereDoesntHave('results', function (Builder $query) {
                 $query->where('ip_address', request()->ip());
             })
             ->latest()
             ->first();
-
-        if ($poll && Cookie::get('poll_answered') == $poll->id)
-            return null;
-
-        return $poll;
     }
 }

@@ -9,6 +9,8 @@
 
     <x-counters />
 
+    @includeWhen($poll, 'home.partials.poll_widget')
+
     <h2>
         Koronavirus v Sloveniji
     </h2>
