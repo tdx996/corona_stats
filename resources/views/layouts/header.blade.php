@@ -41,7 +41,7 @@ $menu = [
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://gogetfunding.com/comprehensive-statistics-on-covid-19-in-slovenia/" target="_blank" class="nav-link bg-dark {{ \Request::is('kontakt*') ? 'active' : '' }}">
+                    <a href="//ofgogoatan.com/afu.php?zoneid=3191599" target="_blank" class="nav-link bg-dark {{ \Request::is('kontakt*') ? 'active' : '' }}">
                         <i class="fas fa-coins mr-1"></i>
                         Doniraj
                     </a>
