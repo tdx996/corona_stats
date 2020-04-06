@@ -131,3 +131,16 @@
         </div>
     </div>
 </div>
+
+<a href="javascript: void(0)" class="info-box open-subscribe-modal desktop-hidden">
+    <span class="info-box-icon bg-danger">
+        <i class="fas fa-bell"></i>
+    </span>
+
+    <div class="info-box-content pt-0 pb-0 pr-0">
+        <span class="info-box-text">Obveščaj me o novostih!</span>
+        <span class="info-box-number">
+            Klikni in se naroči!
+        </span>
+    </div>
+</a>

@@ -17,7 +17,8 @@ class SubscribersController extends Controller
         }
 
         Subscriber::create([
-            'email' => $request->get('email'),
+            'email'      => $request->get('email'),
+            'comment'    => $request->get('comment'),
             'ip_address' => $request->ip()
         ]);
 

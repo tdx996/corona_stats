@@ -9,6 +9,12 @@
     }
 }
 
+@mixin desktop {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 h1 {
     font-size: 2rem;
 }
@@ -43,8 +49,6 @@ h1 {
 .navbar-brand {
     margin-right: 1.5rem;
 }
-
-.desktop-hidden { display: none !important; }
 
 label.optional:after {
     content: " (neobvezno)";
@@ -152,12 +156,14 @@ label.optional:after {
         display: none !important;
     }
 
-    .desktop-hidden { display: block !important; }
-
     .table {
         display: block;
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
+}
+
+@include desktop {
+    .desktop-hidden { display: none !important; }
 }
