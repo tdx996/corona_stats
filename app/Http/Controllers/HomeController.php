@@ -38,9 +38,9 @@ class HomeController extends Controller
 
     private function findPoll(): ?Poll {
         return  Poll::query()
-//            ->whereDoesntHave('results', function (Builder $query) {
-//                $query->where('ip_address', request()->ip());
-//            })
+            ->whereDoesntHave('results', function (Builder $query) {
+                $query->where('ip_address', request()->ip());
+            })
             ->latest()
             ->first();
     }
