@@ -25,7 +25,7 @@ $menu = [
                 <li class="nav-item text-olive">
                     <a href="{{ route('questions.index') }}" class="nav-link bg-yellow {{ \Request::is('debata-o-koronavirusu*') ? 'active' : '' }}">
                         <i class="fas fa-comments mr-1"></i>
-                        Debata o Koronavirusu
+                        Debata
                     </a>
                 </li>
                 <li class="nav-item">
