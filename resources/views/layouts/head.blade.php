@@ -15,6 +15,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Vsakodnevna celostna statistika (opravljeni testi, okužbe, hospitalizirani, na intenzivni negi, smrti) epidemije COVID-19 v Sloveniji." />
+    <meta name="propeller" content="e14d1c2f5f7a40d91ab2cc76b88e9132">
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -23,11 +24,4 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-16x16.png') }}">
-
-    <script type="text/javascript">
-        window._mNHandle = window._mNHandle || {};
-        window._mNHandle.queue = window._mNHandle.queue || [];
-        medianet_versionId = "3121199";
-    </script>
-    <script src="https://contextual.media.net/dmedianet.js?cid=8CUR45AQG" async="async"></script>
 </head>

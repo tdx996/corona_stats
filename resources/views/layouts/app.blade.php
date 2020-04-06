@@ -33,11 +33,6 @@
     </script>
 @endif
 
-@if (env('AD_CLIENT_ID'))
-    <script data-ad-client="{{ env('AD_CLIENT_ID') }}" async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-@endif
-
 @stack('scripts')
 
 </body>

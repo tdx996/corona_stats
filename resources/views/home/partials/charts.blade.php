@@ -68,30 +68,14 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-8">
-        <div class="card card-chart">
-            <div class="card-header d-flex p-0">
-                <h3 class="card-title p-3">
-                    @lang('messages.total_tests') / @lang('messages.total_cases')
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="total_tests_vs_total_cases"></canvas>
-            </div>
-        </div>
+<div class="card card-chart">
+    <div class="card-header d-flex p-0">
+        <h3 class="card-title p-3">
+            @lang('messages.total_tests') / @lang('messages.total_cases')
+        </h3>
     </div>
-    <div class="col-md-4">
-        <div id="317886046">
-            <script type="text/javascript">
-                try {
-                    window._mNHandle.queue.push(function (){
-                        window._mNDetails.loadTag("317886046", "300x250", "317886046");
-                    });
-                }
-                catch (error) {}
-            </script>
-        </div>
+    <div class="card-body">
+        <canvas id="total_tests_vs_total_cases"></canvas>
     </div>
 </div>
 

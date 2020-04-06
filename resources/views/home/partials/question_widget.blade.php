@@ -8,7 +8,9 @@
                 </a>
             </span>
             <span class="description">
-                objavljeno {{ $question->created_at->diffForHumans() }} |
+                @if ($question->answers()->count())
+                    zadnji odgovor {{ $question->answers()->latest('created_at')->first()->created_at->diffForHumans() }} |
+                @endif
                 <span class="text-muted">
                     {{ trans_choice('messages.answers', $question->answers()->count()) }}
                 </span>
