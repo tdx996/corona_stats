@@ -38,7 +38,7 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $('.open-subscribe-modal').on('click', function() {
+            $('.trigger-subscribe-modal').on('click', function() {
                 $('#modal_subscribe').modal('show')
             })
         });

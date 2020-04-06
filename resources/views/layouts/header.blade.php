@@ -35,15 +35,15 @@ $menu = [
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript: void(0)" class="nav-link bg-danger open-subscribe-modal">
+                    <a href="javascript: void(0)" class="nav-link bg-danger trigger-subscribe-modal">
                         <i class="fas fa-bell mr-1"></i>
                         Obveščaj me
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="//ofgogoatan.com/afu.php?zoneid=3191599" target="_blank" class="nav-link bg-dark {{ \Request::is('kontakt*') ? 'active' : '' }}">
+                    <a href="javascript: void(0)" id="trigger_donate_modal" class="nav-link bg-dark">
                         <i class="fas fa-coins mr-1"></i>
-                        Doniraj
+                        Brezplačna donacija
                     </a>
                 </li>
             </ul>
@@ -52,3 +52,4 @@ $menu = [
 </nav>
 
 @include('shared.subscribe_modal')
+@include('shared.donate_modal')

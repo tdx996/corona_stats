@@ -132,7 +132,7 @@
     </div>
 </div>
 
-<a href="javascript: void(0)" class="info-box open-subscribe-modal desktop-hidden">
+<a href="javascript: void(0)" class="info-box trigger-subscribe-modal desktop-hidden">
     <span class="info-box-icon bg-danger">
         <i class="fas fa-bell"></i>
     </span>
