@@ -57,11 +57,6 @@ label.optional:after {
 
 .card {
     &.card-widget-poll {
-        .user-block .username {
-            position: relative;
-            top: 6px;
-        }
-
         @include mobile {
             .card-header>.card-tools {
                 margin-right: 0;

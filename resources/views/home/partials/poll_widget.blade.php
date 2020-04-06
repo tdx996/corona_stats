@@ -5,6 +5,14 @@
             <span class="username text-lg">
                 {{ $poll->question }}
             </span>
+            <span class="description">
+                @if ($poll->results()->count())
+                    zadnji odgovor {{ $poll->results()->latest('created_at')->first()->created_at->diffForHumans() }} |
+                @endif
+                <span class="text-muted">
+                    {{ trans_choice('messages.answers', $poll->results()->count()) }}
+                </span>
+            </span>
         </div>
         <div class="card-tools">
             @foreach ($poll->options as $option)
