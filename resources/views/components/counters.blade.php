@@ -118,7 +118,7 @@
                 <i class="fas fa-virus"></i>
             </span>
 
-            <div class="info-box-content">
+            <div class="info-box-content pt-0 pb-0 pr-0">
                 <span class="info-box-text">@lang('messages.total_active')</span>
                 <span class="info-box-number">
                     {{ $totalActive }}

@@ -25,7 +25,7 @@ class Counters extends Component
 
     private function setActive() {
         $this->totalActive = $this->reportYesterday->total_cases - $this->reportToday->total_deaths - $this->reportToday->total_recovered;
-        $this->newActive = ($this->reportYesterday->new_cases ?? 0) - ($this->reportToday->newDeaths ?? 0) - ($this->reportToday->newRecovered ?? 0);
+        $this->newActive = ($this->reportYesterday->new_cases ?? 0) - ($this->reportToday->new_deaths ?? 0) - ($this->reportToday->new_recovered ?? 0);
     }
 
     private function findTodayReport() {

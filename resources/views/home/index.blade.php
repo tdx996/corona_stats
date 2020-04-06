@@ -131,5 +131,13 @@
                 </small>
             </a>
         </li>
+        <li>
+            <a href="https://www.worldometers.info/coronavirus/" target="_blank">
+                Statistika za svet
+                <small class="ml-1">
+                    <i class="fas fa-external-link-alt"></i>
+                </small>
+            </a>
+        </li>
     </ul>
 @endsection
