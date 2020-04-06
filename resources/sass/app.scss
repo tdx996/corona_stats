@@ -13,6 +13,21 @@ h1 {
     font-size: 2rem;
 }
 
+.timeline {
+    &:before {
+        display: none;
+    }
+
+    > div {
+        margin-right: 0;
+
+        > .timeline-item {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
 .toasts-top-right {
     right: 10px;
     top: 10px;
