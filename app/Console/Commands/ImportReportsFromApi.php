@@ -26,6 +26,8 @@ class ImportReportsFromApi extends Command
         '2020-04-08' => 102,
         '2020-04-09' => 102,
         '2020-04-10' => 102,
+        '2020-04-10' => 102,
+        '2020-04-10' => 102,
     ];
 
     public function __construct() {

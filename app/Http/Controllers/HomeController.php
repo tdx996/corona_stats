@@ -41,7 +41,7 @@ class HomeController extends Controller
             ->whereDoesntHave('results', function (Builder $query) {
                 $query->where('ip_address', request()->ip());
             })
-            ->latest()
+            ->inRandomOrder()
             ->first();
     }
 }
