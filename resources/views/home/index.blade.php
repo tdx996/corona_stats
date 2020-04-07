@@ -9,7 +9,14 @@
 
     <x-counters />
 
+    <h2>
+        Kaj o situciji menijo Slovenci?
+    </h2>
+
     @includeWhen($poll, 'home.partials.poll_widget')
+    @includeWhen(!$poll, 'home.partials.suggest_poll')
+
+    <x-poll-results :excluded-poll="$poll" />
 
     <h2>
         Koronavirus v Sloveniji

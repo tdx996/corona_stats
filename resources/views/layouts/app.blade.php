@@ -33,8 +33,6 @@
     </script>
 @endif
 
-@include('shared.ad_snippet')
-
 @stack('scripts')
 
 </body>

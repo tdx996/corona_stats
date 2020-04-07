@@ -2,6 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Collection;
+
+/**
+ * @property array options
+ * @property Collection results
+ */
 class Poll extends Model
 {
     protected $fillable = [

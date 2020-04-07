@@ -8,12 +8,12 @@
                 </a>
             </span>
             <span class="description">
+                zadnji odgovor
                 @if ($question->answers()->count())
-                    zadnji odgovor {{ $question->answers()->latest('created_at')->first()->created_at->diffForHumans() }} |
+                    {{ $question->answers()->latest('created_at')->first()->created_at->diffForHumans() }}
+                @else
+                    {{ $question->created_at->diffForHumans() }}
                 @endif
-                <span class="text-muted">
-                    {{ trans_choice('messages.answers', $question->answers()->count()) }}
-                </span>
             </span>
         </div>
         <div class="card-tools mobile-hidden">

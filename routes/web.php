@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 Route::get('/infogram', 'HomeController@infogram')->name('infogram');
+Route::post('/anketa/predlagaj','PollsController@suggest')->name('polls.suggest');
 Route::post('/anketa/{poll}','PollsController@answer')->name('polls.answer');
 Route::get('/kontakt','ContactController@show')->name('contact');
 Route::post('/kontakt','ContactController@send')->name('contact');

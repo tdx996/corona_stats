@@ -6,12 +6,12 @@
                 {{ $poll->question }}
             </span>
             <span class="description">
+                zadnji odgovor
                 @if ($poll->results()->count())
-                    zadnji odgovor {{ $poll->results()->latest('created_at')->first()->created_at->diffForHumans() }} |
+                    {{ $poll->results()->latest('created_at')->first()->created_at->diffForHumans() }}
+                @else
+                    {{ $poll->created_at->diffForHumans() }}
                 @endif
-                <span class="text-muted">
-                    {{ trans_choice('messages.answers', $poll->results()->count()) }}
-                </span>
             </span>
         </div>
         <div class="card-tools">
