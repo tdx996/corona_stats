@@ -24,7 +24,7 @@ class PollResults extends Component
                 $query->where('id', '!=', $poll->id);
             })
             ->with('results')
-            ->take(3)
+            ->take(2)
             ->inRandomOrder()
             ->get()
             ->map(function (Poll $poll) {
