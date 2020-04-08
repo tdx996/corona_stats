@@ -23,7 +23,7 @@ class PollResults extends Component
             ->when($excludedPoll, function(Builder $query, Poll $poll) {
                 $query->where('id', '!=', $poll->id);
             })
-            ->has('results', '>=', 50)
+            ->has('results', '>=', 20)
             ->with('results')
             ->take(2)
             ->inRandomOrder()
@@ -33,9 +33,10 @@ class PollResults extends Component
                 $resultsCount = $poll->results->count();
                 $poll->options_extended = collect($poll->options)
                     ->map(function ($option) use ($resultsCountedByOptions, $resultsCount) {
+                        $optionCount = $resultsCountedByOptions[$option] ?? 0;
                         return (object)[
                             'value'      => $option,
-                            'percentage' => round(($resultsCountedByOptions[$option] / $resultsCount) * 100, 1)
+                            'percentage' => round(($optionCount / $resultsCount) * 100, 1)
                         ];
                     })
                     ->sortBy('percentage')
