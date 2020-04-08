@@ -15,8 +15,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Vsakodnevna celostna statistika (opravljeni testi, okužbe, hospitalizirani, na intenzivni negi, smrti) epidemije COVID-19 v Sloveniji." />
-    <meta name="propeller" content="e14d1c2f5f7a40d91ab2cc76b88e9132">
-    <meta name="hilltopads-site-verification" content="8ee5a4f228b5a5aac4de1b780a8754ea967ff598" />
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">

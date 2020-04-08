@@ -41,9 +41,9 @@ $menu = [
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript: void(0)" id="trigger_donate_modal" class="nav-link bg-dark">
+                    <a href="https://gogetfunding.com/comprehensive-statistics-on-covid-19-in-slovenia/" target="_blank" class="nav-link bg-dark">
                         <i class="fas fa-coins mr-1"></i>
-                        Brezplačna donacija
+                        Donacija
                     </a>
                 </li>
             </ul>
@@ -52,4 +52,3 @@ $menu = [
 </nav>
 
 @include('shared.subscribe_modal')
-@include('shared.donate_modal')

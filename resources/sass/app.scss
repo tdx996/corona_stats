@@ -19,6 +19,16 @@ h1 {
     font-size: 2rem;
 }
 
+.ad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    iframe {
+        margin-bottom: 1rem;
+    }
+}
+
 .timeline {
     &:before {
         display: none;

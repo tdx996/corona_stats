@@ -1,4 +1,16 @@
 <div class="row">
+    <div class="col-md-4 ad-container">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '9b6ffc479b1b245933e187882c3f24e7',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.hiprofitnetworks.com/9b6ffc479b1b245933e187882c3f24e7/invoke.js"></scr' + 'ipt>');
+        </script>
+    </div>
     @foreach ($polls as $poll)
         <div class="col-md-4">
             <div class="card" style="height: calc(100% - 1rem);">
@@ -22,16 +34,4 @@
             </div>
         </div>
     @endforeach
-    <div class="col-md-4">
-        <script>
-            (function(__htas){
-                var d = document,
-                    s = d.createElement('script'),
-                    l = d.scripts[d.scripts.length - 1];
-                s.settings = __htas || {};
-                s.src = "\/\/ackbure.pro\/a\/WlZ.y\/Q\/2v9\/kzZGT\/9v6PbP2Q5BlISRWNQS9lNQD\/Ed0xM\/D-kL3pMHSB0\/0JM\/TUQkwwOvTmcHysJknVB\/1vcN2uhTagbL2\/5\/ltS\/WVQW9\/NjDaEz0YMBD\/kC3PMBSV0n0oM\/ThQfwKO\/TIcoyM";
-                l.parentNode.insertBefore(s, l);
-            })({})
-        </script>
-    </div>
 </div>
