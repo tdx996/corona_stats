@@ -29,20 +29,25 @@ class PollResults extends Component
             ->inRandomOrder()
             ->get()
             ->map(function (Poll $poll) {
-                $resultsCountedByOptions = $poll->results->pluck('value')->countBy();
-                $resultsCount = $poll->results->count();
-                $poll->options_extended = collect($poll->options)
-                    ->map(function ($option) use ($resultsCountedByOptions, $resultsCount) {
-                        $optionCount = $resultsCountedByOptions[$option] ?? 0;
-                        return (object)[
-                            'value'      => $option,
-                            'percentage' => round(($optionCount / $resultsCount) * 100, 1)
-                        ];
-                    })
-                    ->sortBy('percentage')
-                    ->reverse();
+                $poll->options_extended = $this->getExtendedOptions($poll);
 
                 return $poll;
             });
+    }
+
+    private function getExtendedOptions(Poll $poll) {
+        $resultsCountedByOptions = $poll->results->pluck('value')->countBy();
+        $resultsCount = $poll->results->count();
+
+        return collect($poll->options)
+            ->map(function ($option) use ($resultsCountedByOptions, $resultsCount) {
+                $optionCount = $resultsCountedByOptions[$option] ?? 0;
+                return (object)[
+                    'value'      => $option,
+                    'percentage' => round(($optionCount / $resultsCount) * 100, 1)
+                ];
+            })
+            ->sortBy('percentage')
+            ->reverse();;
     }
 }
