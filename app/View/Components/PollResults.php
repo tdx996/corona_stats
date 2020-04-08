@@ -23,6 +23,7 @@ class PollResults extends Component
             ->when($excludedPoll, function(Builder $query, Poll $poll) {
                 $query->where('id', '!=', $poll->id);
             })
+            ->has('results', '>=', 10)
             ->with('results')
             ->take(2)
             ->inRandomOrder()

@@ -18,16 +18,35 @@ class ImportReportsFromApi extends Command
     protected $description = 'Import reports from API.';
 
     protected $recovered = [
-        '2020-04-03' => 70,
-        '2020-04-04' => 79,
-        '2020-04-05' => 79,
-        '2020-04-06' => 102,
+        '2020-03-17' => 3,
+        '2020-03-18' => 6,
+        '2020-03-19' => 18,
+        '2020-03-20' => 26,
+        '2020-03-21' => 28,
+        '2020-03-22' => 32,
+        '2020-03-23' => 35,
+        '2020-03-24' => 37,
+        '2020-03-25' => 42,
+        '2020-03-26' => 48,
+        '2020-03-27' => 54,
+        '2020-03-28' => 54,
+        '2020-03-29' => 57,
+        '2020-03-30' => 64,
+        '2020-03-31' => 72,
+        '2020-04-01' => 78,
+        '2020-04-02' => 83,
+        '2020-04-03' => 93,
+        '2020-04-04' => 98,
+        '2020-04-05' => 102,
+        '2020-04-06' => 115,
         '2020-04-07' => 115,
         '2020-04-08' => 115,
         '2020-04-09' => 115,
         '2020-04-10' => 115,
-        '2020-04-10' => 115,
-        '2020-04-10' => 115,
+        '2020-04-11' => 115,
+        '2020-04-12' => 115,
+        '2020-04-13' => 115,
+        '2020-04-14' => 115,
     ];
 
     public function __construct() {
@@ -53,6 +72,7 @@ class ImportReportsFromApi extends Command
 
         collect($response->json())->each(function ($dailyReport) {
             $reportedAt = Carbon::create($dailyReport['year'], $dailyReport['month'], $dailyReport['day']);
+            
             $report = Report::create([
                 'reported_at'        => $reportedAt,
                 'new_cases'          => $dailyReport['cases']['confirmedToday'],
