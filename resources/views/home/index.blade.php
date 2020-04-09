@@ -1,7 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('home.partials.question_widget')
+    <div class="row">
+        <div class="col-md-7">
+            @include('home.partials.question_widget')
+
+        </div>
+        <div class="col-md-5 ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '9aa6aa6a63379ed701bfb7cf2b56b4c7',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://b73uszzq3g9h.com/9aa6aa6a63379ed701bfb7cf2b56b4c7/invoke.js"></scr' + 'ipt>');
+            </script>
+        </div>
+    </div>
 
     <h1 class="d-inline-block">
         Statistika Slovenije
@@ -13,8 +30,24 @@
         Kaj o situciji menijo Slovenci?
     </h2>
 
-    @includeWhen($poll, 'home.partials.poll_widget')
-    @includeWhen(!$poll, 'home.partials.suggest_poll')
+    <div class="row">
+        <div class="col-md-8">
+            @includeWhen($poll, 'home.partials.poll_widget')
+            @includeWhen(!$poll, 'home.partials.suggest_poll')
+        </div>
+        <div class="col-md-4 ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '293170ff2749d9e762bef1b55ccd21c3',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://b73uszzq3g9h.com/293170ff2749d9e762bef1b55ccd21c3/invoke.js"></scr' + 'ipt>');
+            </script>
+        </div>
+    </div>
 
     <x-poll-results :excluded-poll="$poll" />
 
@@ -102,6 +135,8 @@
     <p>
         Socialno distanciranje pomaga pri zajezitvi širjenja nalezljivih bolezni, ki se prenašajo kapljično. Še posebej za osebe, ki so zdrave, vendar so bile v tesnem stiku z osebo, pri kateri je bila potrjena okužba s COVID-19. Visoko tvegani so predvsem družinski kontakti, saj je prav v domačem okolju največ možnosti za prenos novega koronavirusa. Socialno distanciranje je priporočilo in ne obveza posamezniku. Tisti, ki ne morejo dela opravljati od doma, lahko hodijo v službo, vendar naj se čim bolj pozorno samoopazujejo in prenehajo z delom ob pojavu bolezenskih težav. Pomeni predvsem upoštevanje navodil, da se brez potrebe ne družimo z osebami izven skupnega gospodinjstva, pazimo na razdaljo 1,5 m, v trgovino gremo čim manjkrat in takrat, ko ni veliko ljudi, kar največ poskusimo opraviti preko spletnih strani. Zelo smo pozorni glede higiene. Vsekakor pa osebam ni odvzeta svoboda gibanja, bolj ključno je razumevanje, da z ustreznim ravnanjem zmanjšujejo možnost širjenja okužbe in prispevajo k obvladovanju pandemije COVID-19. Oseba ni v bolniškem staležu.
     </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LGu-L5ULByw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <div class="row">
         <div class="col-md-6">
