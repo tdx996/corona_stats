@@ -1,24 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-7">
-            @include('home.partials.question_widget')
-
-        </div>
-        <div class="col-md-5 ad-container">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '9aa6aa6a63379ed701bfb7cf2b56b4c7',
-                    'format' : 'iframe',
-                    'height' : 60,
-                    'width' : 468,
-                    'params' : {}
-                };
-                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://b73uszzq3g9h.com/9aa6aa6a63379ed701bfb7cf2b56b4c7/invoke.js"></scr' + 'ipt>');
-            </script>
-        </div>
-    </div>
+    @include('home.partials.question_widget')
 
     <h1 class="d-inline-block">
         Statistika Slovenije
@@ -30,24 +13,8 @@
         Kaj o situciji menijo Slovenci?
     </h2>
 
-    <div class="row">
-        <div class="col-md-8">
-            @includeWhen($poll, 'home.partials.poll_widget')
-            @includeWhen(!$poll, 'home.partials.suggest_poll')
-        </div>
-        <div class="col-md-4 ad-container">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '293170ff2749d9e762bef1b55ccd21c3',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://b73uszzq3g9h.com/293170ff2749d9e762bef1b55ccd21c3/invoke.js"></scr' + 'ipt>');
-            </script>
-        </div>
-    </div>
+    @includeWhen($poll, 'home.partials.poll_widget')
+    @includeWhen(!$poll, 'home.partials.suggest_poll')
 
     <x-poll-results :excluded-poll="$poll" />
 

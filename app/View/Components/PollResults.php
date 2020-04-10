@@ -25,7 +25,7 @@ class PollResults extends Component
             })
             ->has('results', '>=', 20)
             ->with('results')
-            ->take(2)
+            ->take(3)
             ->inRandomOrder()
             ->get()
             ->map(function (Poll $poll) {
