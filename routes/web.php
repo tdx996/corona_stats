@@ -20,6 +20,8 @@ Route::post('/anketa/{poll}','PollsController@answer')->name('polls.answer');
 Route::get('/kontakt','ContactController@show')->name('contact');
 Route::post('/kontakt','ContactController@send')->name('contact');
 
+Route::get('/charts/new-tests-vs-new-cases','ChartsController@newTestsVsNewCases');
+
 Route::post('/naroci-se','SubscribersController@create')->name('subscribers.create');
 
 Route::get('/debata-o-koronavirusu', 'QuestionsController@index')->name('questions.index');
